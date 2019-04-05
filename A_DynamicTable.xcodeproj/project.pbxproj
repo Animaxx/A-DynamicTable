@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A957D76822564A1F0088C37B /* A_DynamicTable.h in Headers */ = {isa = PBXBuildFile; fileRef = A957D76622564A1F0088C37B /* A_DynamicTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9718FA1225698AE002C07AD /* DynamicForm.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F90225698AE002C07AD /* DynamicForm.m */; };
+		A9718FA2225698AE002C07AD /* DynamicBaseHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F93225698AE002C07AD /* DynamicBaseHeaderModel.m */; };
+		A9718FA3225698AE002C07AD /* DynamicBaseRowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F94225698AE002C07AD /* DynamicBaseRowModel.m */; };
+		A9718FA4225698AE002C07AD /* DynamicBaseHeaderModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F95225698AE002C07AD /* DynamicBaseHeaderModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9718FA5225698AE002C07AD /* DynamicBaseRowModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F96225698AE002C07AD /* DynamicBaseRowModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9718FA6225698AE002C07AD /* DynamicEmptyHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F98225698AE002C07AD /* DynamicEmptyHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9718FA7225698AE002C07AD /* DynamicSectionGroupHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F99225698AE002C07AD /* DynamicSectionGroupHeader.m */; };
+		A9718FA8225698AE002C07AD /* CollapsibleHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F9A225698AE002C07AD /* CollapsibleHeader.m */; };
+		A9718FA9225698AE002C07AD /* DynamicSectionGroupHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F9B225698AE002C07AD /* DynamicSectionGroupHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9718FAA225698AE002C07AD /* DynamicEmptyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F9C225698AE002C07AD /* DynamicEmptyHeader.m */; };
+		A9718FAB225698AE002C07AD /* CollapsibleHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F9D225698AE002C07AD /* CollapsibleHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9718FAC225698AE002C07AD /* DynamicTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F9E225698AE002C07AD /* DynamicTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9718FAD225698AE002C07AD /* DynamicForm.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F9F225698AE002C07AD /* DynamicForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9718FAE225698AE002C07AD /* DynamicTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718FA0225698AE002C07AD /* DynamicTableView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A957D76322564A1F0088C37B /* A_DynamicTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = A_DynamicTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A957D76622564A1F0088C37B /* A_DynamicTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = A_DynamicTable.h; sourceTree = "<group>"; };
+		A957D76722564A1F0088C37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9718F90225698AE002C07AD /* DynamicForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicForm.m; sourceTree = "<group>"; };
+		A9718F93225698AE002C07AD /* DynamicBaseHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicBaseHeaderModel.m; sourceTree = "<group>"; };
+		A9718F94225698AE002C07AD /* DynamicBaseRowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicBaseRowModel.m; sourceTree = "<group>"; };
+		A9718F95225698AE002C07AD /* DynamicBaseHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicBaseHeaderModel.h; sourceTree = "<group>"; };
+		A9718F96225698AE002C07AD /* DynamicBaseRowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicBaseRowModel.h; sourceTree = "<group>"; };
+		A9718F98225698AE002C07AD /* DynamicEmptyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicEmptyHeader.h; sourceTree = "<group>"; };
+		A9718F99225698AE002C07AD /* DynamicSectionGroupHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicSectionGroupHeader.m; sourceTree = "<group>"; };
+		A9718F9A225698AE002C07AD /* CollapsibleHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapsibleHeader.m; sourceTree = "<group>"; };
+		A9718F9B225698AE002C07AD /* DynamicSectionGroupHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicSectionGroupHeader.h; sourceTree = "<group>"; };
+		A9718F9C225698AE002C07AD /* DynamicEmptyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicEmptyHeader.m; sourceTree = "<group>"; };
+		A9718F9D225698AE002C07AD /* CollapsibleHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapsibleHeader.h; sourceTree = "<group>"; };
+		A9718F9E225698AE002C07AD /* DynamicTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicTableView.h; sourceTree = "<group>"; };
+		A9718F9F225698AE002C07AD /* DynamicForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicForm.h; sourceTree = "<group>"; };
+		A9718FA0225698AE002C07AD /* DynamicTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicTableView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A957D76022564A1F0088C37B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A957D75922564A1F0088C37B = {
+			isa = PBXGroup;
+			children = (
+				A957D76522564A1F0088C37B /* A_DynamicTable */,
+				A957D76422564A1F0088C37B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A957D76422564A1F0088C37B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A957D76322564A1F0088C37B /* A_DynamicTable.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A957D76522564A1F0088C37B /* A_DynamicTable */ = {
+			isa = PBXGroup;
+			children = (
+				A9718FB02256A95D002C07AD /* Common */,
+				A9718FAF225698CB002C07AD /* DynamicTable */,
+				A9718F91225698AE002C07AD /* BaseTableElements */,
+				A957D76622564A1F0088C37B /* A_DynamicTable.h */,
+				A957D76722564A1F0088C37B /* Info.plist */,
+			);
+			path = A_DynamicTable;
+			sourceTree = "<group>";
+		};
+		A9718F91225698AE002C07AD /* BaseTableElements */ = {
+			isa = PBXGroup;
+			children = (
+				A9718F92225698AE002C07AD /* BaseElements */,
+				A9718F97225698AE002C07AD /* BaseFunctionHeaders */,
+			);
+			path = BaseTableElements;
+			sourceTree = "<group>";
+		};
+		A9718F92225698AE002C07AD /* BaseElements */ = {
+			isa = PBXGroup;
+			children = (
+				A9718F95225698AE002C07AD /* DynamicBaseHeaderModel.h */,
+				A9718F93225698AE002C07AD /* DynamicBaseHeaderModel.m */,
+				A9718F96225698AE002C07AD /* DynamicBaseRowModel.h */,
+				A9718F94225698AE002C07AD /* DynamicBaseRowModel.m */,
+			);
+			path = BaseElements;
+			sourceTree = "<group>";
+		};
+		A9718F97225698AE002C07AD /* BaseFunctionHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				A9718F98225698AE002C07AD /* DynamicEmptyHeader.h */,
+				A9718F9C225698AE002C07AD /* DynamicEmptyHeader.m */,
+				A9718F9B225698AE002C07AD /* DynamicSectionGroupHeader.h */,
+				A9718F99225698AE002C07AD /* DynamicSectionGroupHeader.m */,
+				A9718F9D225698AE002C07AD /* CollapsibleHeader.h */,
+				A9718F9A225698AE002C07AD /* CollapsibleHeader.m */,
+			);
+			path = BaseFunctionHeaders;
+			sourceTree = "<group>";
+		};
+		A9718FAF225698CB002C07AD /* DynamicTable */ = {
+			isa = PBXGroup;
+			children = (
+				A9718F9F225698AE002C07AD /* DynamicForm.h */,
+				A9718F90225698AE002C07AD /* DynamicForm.m */,
+				A9718F9E225698AE002C07AD /* DynamicTableView.h */,
+				A9718FA0225698AE002C07AD /* DynamicTableView.m */,
+			);
+			path = DynamicTable;
+			sourceTree = "<group>";
+		};
+		A9718FB02256A95D002C07AD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A957D75E22564A1F0088C37B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9718FAC225698AE002C07AD /* DynamicTableView.h in Headers */,
+				A9718FA4225698AE002C07AD /* DynamicBaseHeaderModel.h in Headers */,
+				A9718FA9225698AE002C07AD /* DynamicSectionGroupHeader.h in Headers */,
+				A9718FAB225698AE002C07AD /* CollapsibleHeader.h in Headers */,
+				A9718FAD225698AE002C07AD /* DynamicForm.h in Headers */,
+				A957D76822564A1F0088C37B /* A_DynamicTable.h in Headers */,
+				A9718FA5225698AE002C07AD /* DynamicBaseRowModel.h in Headers */,
+				A9718FA6225698AE002C07AD /* DynamicEmptyHeader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A957D76222564A1F0088C37B /* A_DynamicTable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A957D76B22564A1F0088C37B /* Build configuration list for PBXNativeTarget "A_DynamicTable" */;
+			buildPhases = (
+				A957D75E22564A1F0088C37B /* Headers */,
+				A957D75F22564A1F0088C37B /* Sources */,
+				A957D76022564A1F0088C37B /* Frameworks */,
+				A957D76122564A1F0088C37B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = A_DynamicTable;
+			productName = A_DynamicTable;
+			productReference = A957D76322564A1F0088C37B /* A_DynamicTable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A957D75A22564A1F0088C37B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Animax;
+				TargetAttributes = {
+					A957D76222564A1F0088C37B = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = A957D75D22564A1F0088C37B /* Build configuration list for PBXProject "A_DynamicTable" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A957D75922564A1F0088C37B;
+			productRefGroup = A957D76422564A1F0088C37B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A957D76222564A1F0088C37B /* A_DynamicTable */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A957D76122564A1F0088C37B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A957D75F22564A1F0088C37B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9718FAA225698AE002C07AD /* DynamicEmptyHeader.m in Sources */,
+				A9718FA1225698AE002C07AD /* DynamicForm.m in Sources */,
+				A9718FA2225698AE002C07AD /* DynamicBaseHeaderModel.m in Sources */,
+				A9718FAE225698AE002C07AD /* DynamicTableView.m in Sources */,
+				A9718FA8225698AE002C07AD /* CollapsibleHeader.m in Sources */,
+				A9718FA7225698AE002C07AD /* DynamicSectionGroupHeader.m in Sources */,
+				A9718FA3225698AE002C07AD /* DynamicBaseRowModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A957D76922564A1F0088C37B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A957D76A22564A1F0088C37B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A957D76C22564A1F0088C37B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = A_DynamicTable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.animax.dynamictable;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A957D76D22564A1F0088C37B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = A_DynamicTable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.animax.dynamictable;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A957D75D22564A1F0088C37B /* Build configuration list for PBXProject "A_DynamicTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A957D76922564A1F0088C37B /* Debug */,
+				A957D76A22564A1F0088C37B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A957D76B22564A1F0088C37B /* Build configuration list for PBXNativeTarget "A_DynamicTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A957D76C22564A1F0088C37B /* Debug */,
+				A957D76D22564A1F0088C37B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A957D75A22564A1F0088C37B /* Project object */;
+}
