@@ -21,7 +21,7 @@
 @property (readwrite, nonatomic) BOOL isGroupSectionTable;
 @property (strong, nonatomic) NSMutableOrderedSet<NSString *> *sectionKeys;
 @property (strong, nonatomic) NSMapTable<NSString *, DynamicBaseHeaderModel *> *headerModels;
-@property (strong, nonatomic) NSMapTable<NSString *, NSMutableArray<DynamicBaseRowModel *> *> *rowModelGroups;
+@property (strong, nonatomic) NSMapTable<NSString *, NSMutableArray<DynamicRowModel *> *> *rowModelGroups;
 
 @end
 
@@ -42,10 +42,10 @@
 - (NSUInteger)count {
     return [self.sectionKeys count];
 }
-- (NSMutableArray<DynamicBaseRowModel *> *)objectForHeader:(DynamicBaseHeaderModel *)aKey {
+- (NSMutableArray<DynamicRowModel *> *)objectForHeader:(DynamicBaseHeaderModel *)aKey {
     return [self.rowModelGroups objectForKey:aKey.sectionId];
 }
-- (void)insertRowGroup:(NSMutableArray<DynamicBaseRowModel *> *)rowGroup forHeader:(DynamicBaseHeaderModel *)aHeader atIndex:(NSUInteger)anIndex {
+- (void)insertRowGroup:(NSMutableArray<DynamicRowModel *> *)rowGroup forHeader:(DynamicBaseHeaderModel *)aHeader atIndex:(NSUInteger)anIndex {
     [self.sectionKeys setObject:aHeader.sectionId atIndex:anIndex];
     [self.headerModels setObject:aHeader forKey:aHeader.sectionId];
     [self.rowModelGroups setObject:rowGroup forKey:aHeader.sectionId];
@@ -54,7 +54,7 @@
         self.isGroupSectionTable = YES;
     }
 }
-- (void)setRowGroup:(NSMutableArray<DynamicBaseRowModel *> *)rowGroup forHeader:(DynamicBaseHeaderModel *)aHeader {
+- (void)setRowGroup:(NSMutableArray<DynamicRowModel *> *)rowGroup forHeader:(DynamicBaseHeaderModel *)aHeader {
     [self.sectionKeys addObject:aHeader.sectionId];
     [self.headerModels setObject:aHeader forKey:aHeader.sectionId];
     [self.rowModelGroups setObject:rowGroup forKey:aHeader.sectionId];
@@ -82,13 +82,6 @@
     NSString *key = [self.sectionKeys objectAtIndex:index];
     [self.headerModels removeObjectForKey:key];
     [self.rowModelGroups removeObjectForKey:key];
-    
-//    for (DynamicBaseHeaderModel *item in [self.formKey allValues]) {
-//        if ([item isKindOfClass:[DynamicSectionGroupHeader class]]) {
-//            self.isGroupSectionTable = YES;
-//            return;
-//        }
-//    }
     self.isGroupSectionTable = NO;
 }
 
@@ -117,41 +110,41 @@
     return key ? [self.headerModels objectForKey:key] : nil;
 }
 
-- (NSMutableArray<DynamicBaseRowModel *> *)lastSectionOfRows {
+- (NSMutableArray<DynamicRowModel *> *)lastSectionOfRows {
     if ([self.rowModelGroups count] == 0) {
         return nil;
     }
     return [self.rowModelGroups objectForKey:[self.sectionKeys lastObject]];
 }
-- (NSMutableArray<DynamicBaseRowModel *> *)firstSectionOfRows {
+- (NSMutableArray<DynamicRowModel *> *)firstSectionOfRows {
     if ([self.rowModelGroups count] == 0) {
         return nil;
     }
     return [self.rowModelGroups objectForKey:[self.sectionKeys firstObject]];
 }
-- (NSMutableArray<DynamicBaseRowModel *> *)rowsAtIndex:(NSInteger)index {
+- (NSMutableArray<DynamicRowModel *> *)rowsAtIndex:(NSInteger)index {
     NSString *key = [self.sectionKeys objectAtIndex:index];
     return key ? [self.rowModelGroups objectForKey:key] : nil;
 }
 
-- (DynamicBaseRowModel *)getRow:(NSIndexPath *)indexPath {
+- (DynamicRowModel *)getRow:(NSIndexPath *)indexPath {
     NSString *key = [self.sectionKeys objectAtIndex:indexPath.section];
     return [[self.rowModelGroups objectForKey:key] objectAtIndex:indexPath.row];
 }
 
-- (NSArray<DynamicBaseRowModel *> *)allRows {
-    NSMutableArray<DynamicBaseRowModel *> * rows = [[NSMutableArray alloc] init];
+- (NSArray<DynamicRowModel *> *)allRows {
+    NSMutableArray<DynamicRowModel *> * rows = [[NSMutableArray alloc] init];
     for (NSString* itemKey in self.sectionKeys) {
-        NSMutableArray<DynamicBaseRowModel *> *items = [self.rowModelGroups objectForKey:itemKey];
+        NSMutableArray<DynamicRowModel *> *items = [self.rowModelGroups objectForKey:itemKey];
         [rows addObjectsFromArray:items];
     }
     return rows;
 }
 
-- (NSArray<DynamicBaseRowModel *> *)getTypeOfRows:(Class)rowType {
+- (NSArray<DynamicRowModel *> *)getTypeOfRows:(Class)rowType {
     NSMutableArray *rows = [[NSMutableArray alloc] init];
     for (NSString* key in self.sectionKeys) {
-        for (DynamicBaseRowModel *item in [self.rowModelGroups objectForKey:key]) {
+        for (DynamicRowModel *item in [self.rowModelGroups objectForKey:key]) {
             if ([item isKindOfClass:rowType]) {
                 [rows addObject:item];
             }
@@ -168,20 +161,20 @@
     self.isGroupSectionTable = NO;
     return self;
 }
-- (DynamicForm *)addRow:(DynamicBaseRowModel *)row {
+- (DynamicForm *)addRow:(DynamicRowModel *)row {
     if (self.count == 0) {
         DynamicEmptyHeader *header = [[DynamicEmptyHeader alloc] init];
         [self insertRowGroup:[@[row] mutableCopy] forHeader:header atIndex:0];
     } else {
-        [((NSMutableArray<DynamicBaseRowModel *> *)[self lastSectionOfRows]) addObject:row];
+        [((NSMutableArray<DynamicRowModel *> *)[self lastSectionOfRows]) addObject:row];
     }
     [row setup];
     
     return self;
 }
-- (DynamicForm *)addRow:(DynamicBaseRowModel *)row atSection:(NSInteger)section {
+- (DynamicForm *)addRow:(DynamicRowModel *)row atSection:(NSInteger)section {
     if (self.count > section) {
-        [((NSMutableArray<DynamicBaseRowModel *> *)[self rowsAtIndex:section]) addObject:row];
+        [((NSMutableArray<DynamicRowModel *> *)[self rowsAtIndex:section]) addObject:row];
         [row setup];
     } else {
         NSLog(@"[ERROR] Section index exceeded in DynamicForm - addRow:atSection");
@@ -189,7 +182,7 @@
     
     return self;
 }
-- (DynamicForm *)addRow:(DynamicBaseRowModel *)row toSection:(DynamicBaseHeaderModel *)section {
+- (DynamicForm *)addRow:(DynamicRowModel *)row toSection:(DynamicBaseHeaderModel *)section {
     [[self objectForHeader:section] addObject:row];
     [row setup];
     

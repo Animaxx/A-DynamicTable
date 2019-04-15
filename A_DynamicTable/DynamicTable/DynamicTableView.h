@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DynamicForm.h"
-#import "DynamicBaseRowModel.h"
+#import "DynamicRowModel.h"
 
 @interface DynamicTableView : UITableView
 

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DynamicBaseHeaderModel.h"
-#import "DynamicBaseRowModel.h"
+#import "DynamicRowModel.h"
 
 /**
  DynamicForm is the data container for Dynamic
@@ -18,9 +18,9 @@
 @property (readonly) NSUInteger count;
 @property (readonly, nonatomic) BOOL isGroupSectionTable;
 
-- (nullable NSMutableArray<DynamicBaseRowModel *> *)objectForHeader:(nonnull DynamicBaseHeaderModel *)aKey;
-- (void)insertRowGroup:(nonnull NSMutableArray<DynamicBaseRowModel *> *)rowGroup forHeader:(nonnull DynamicBaseHeaderModel *)aHeader atIndex:(NSUInteger)anIndex;
-- (void)setRowGroup:(nonnull NSMutableArray<DynamicBaseRowModel *> *)rowGroup forHeader:(nonnull DynamicBaseHeaderModel *)aHeader;
+- (nullable NSMutableArray<DynamicRowModel *> *)objectForHeader:(nonnull DynamicBaseHeaderModel *)aKey;
+- (void)insertRowGroup:(nonnull NSMutableArray<DynamicRowModel *> *)rowGroup forHeader:(nonnull DynamicBaseHeaderModel *)aHeader atIndex:(NSUInteger)anIndex;
+- (void)setRowGroup:(nonnull NSMutableArray<DynamicRowModel *> *)rowGroup forHeader:(nonnull DynamicBaseHeaderModel *)aHeader;
 - (void)removeRowsForHeader:(nonnull DynamicBaseHeaderModel *)aKey;
 - (void)removeRowsAtSectionIndex:(NSUInteger)index;
 
@@ -28,54 +28,54 @@
 - (nullable DynamicBaseHeaderModel *)firstHeader;
 - (nullable DynamicBaseHeaderModel *)getHeaderAtIndex:(NSInteger)index;
 
-- (nullable NSArray<DynamicBaseRowModel *> *)lastSectionOfRows;
-- (nullable NSArray<DynamicBaseRowModel *> *)firstSectionOfRows;
-- (nullable NSArray<DynamicBaseRowModel *> *)rowsAtIndex:(NSInteger)index;
+- (nullable NSArray<DynamicRowModel *> *)lastSectionOfRows;
+- (nullable NSArray<DynamicRowModel *> *)firstSectionOfRows;
+- (nullable NSArray<DynamicRowModel *> *)rowsAtIndex:(NSInteger)index;
 
 - (nonnull NSArray<DynamicBaseHeaderModel *> *)allHeaders;
-- (nonnull NSArray<DynamicBaseRowModel *> *)allRows;
+- (nonnull NSArray<DynamicRowModel *> *)allRows;
 
 /**
  Get Row by indexPath
 
  @param indexPath NSIndexPath
- @return DynamicBaseRowModel
+ @return DynamicRowModel
  */
-- (nullable DynamicBaseRowModel *)getRow:(nonnull NSIndexPath *)indexPath;
+- (nullable DynamicRowModel *)getRow:(nonnull NSIndexPath *)indexPath;
 
 /**
  Get Rows by Class type
  
  @param rowType CLass
- @return DynamicBaseRowModel Array
+ @return DynamicRowModel Array
  */
-- (nullable NSArray<DynamicBaseRowModel *> *)getTypeOfRows:(nonnull Class)rowType;
+- (nullable NSArray<DynamicRowModel *> *)getTypeOfRows:(nonnull Class)rowType;
 
 /**
  Add Row model to currect header;
  if the table doen't have any header, then it will add empty header.
  
- @param row DynamicBaseRowModel
+ @param row DynamicRowModel
  */
-- (nonnull DynamicForm *)addRow:(nonnull DynamicBaseRowModel *)row;
+- (nonnull DynamicForm *)addRow:(nonnull DynamicRowModel *)row;
 
 
 /**
  Add Row model to header by index number
 
- @param row DynamicBaseRowModel
+ @param row DynamicRowModel
  @param section NSInteger
  */
-- (nonnull DynamicForm *)addRow:(nonnull DynamicBaseRowModel *)row atSection:(NSInteger)section;
+- (nonnull DynamicForm *)addRow:(nonnull DynamicRowModel *)row atSection:(NSInteger)section;
 
 
 /**
  Add Row model to header
 
- @param row DynamicBaseRowModel
+ @param row DynamicRowModel
  @param section NSInteger
  */
-- (nonnull DynamicForm *)addRow:(nonnull DynamicBaseRowModel *)row toSection:(nonnull DynamicBaseHeaderModel *)section;
+- (nonnull DynamicForm *)addRow:(nonnull DynamicRowModel *)row toSection:(nonnull DynamicBaseHeaderModel *)section;
 
 
 /**

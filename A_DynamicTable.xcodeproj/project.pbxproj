@@ -10,9 +10,9 @@
 		A957D76822564A1F0088C37B /* A_DynamicTable.h in Headers */ = {isa = PBXBuildFile; fileRef = A957D76622564A1F0088C37B /* A_DynamicTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9718FA1225698AE002C07AD /* DynamicForm.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F90225698AE002C07AD /* DynamicForm.m */; };
 		A9718FA2225698AE002C07AD /* DynamicBaseHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F93225698AE002C07AD /* DynamicBaseHeaderModel.m */; };
-		A9718FA3225698AE002C07AD /* DynamicBaseRowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F94225698AE002C07AD /* DynamicBaseRowModel.m */; };
+		A9718FA3225698AE002C07AD /* DynamicRowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F94225698AE002C07AD /* DynamicRowModel.m */; };
 		A9718FA4225698AE002C07AD /* DynamicBaseHeaderModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F95225698AE002C07AD /* DynamicBaseHeaderModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9718FA5225698AE002C07AD /* DynamicBaseRowModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F96225698AE002C07AD /* DynamicBaseRowModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9718FA5225698AE002C07AD /* DynamicRowModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F96225698AE002C07AD /* DynamicRowModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9718FA6225698AE002C07AD /* DynamicEmptyHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F98225698AE002C07AD /* DynamicEmptyHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9718FA7225698AE002C07AD /* DynamicSectionGroupHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F99225698AE002C07AD /* DynamicSectionGroupHeader.m */; };
 		A9718FA8225698AE002C07AD /* CollapsibleHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F9A225698AE002C07AD /* CollapsibleHeader.m */; };
@@ -22,6 +22,11 @@
 		A9718FAC225698AE002C07AD /* DynamicTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F9E225698AE002C07AD /* DynamicTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9718FAD225698AE002C07AD /* DynamicForm.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F9F225698AE002C07AD /* DynamicForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9718FAE225698AE002C07AD /* DynamicTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718FA0225698AE002C07AD /* DynamicTableView.m */; };
+		A9739FBF2259514600C7992E /* SingleLineHeaderModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9739FBD2259514600C7992E /* SingleLineHeaderModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9739FC02259514600C7992E /* SingleLineHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9739FBE2259514600C7992E /* SingleLineHeaderModel.m */; };
+		A9739FC62259530500C7992E /* SingleLineHeaderModel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9739FC52259530500C7992E /* SingleLineHeaderModel.xib */; };
+		A9739FCE22595D3F00C7992E /* SingleLineRowModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9739FCC22595D3F00C7992E /* SingleLineRowModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9739FCF22595D3F00C7992E /* SingleLineRowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9739FCD22595D3F00C7992E /* SingleLineRowModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +35,9 @@
 		A957D76722564A1F0088C37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9718F90225698AE002C07AD /* DynamicForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicForm.m; sourceTree = "<group>"; };
 		A9718F93225698AE002C07AD /* DynamicBaseHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicBaseHeaderModel.m; sourceTree = "<group>"; };
-		A9718F94225698AE002C07AD /* DynamicBaseRowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicBaseRowModel.m; sourceTree = "<group>"; };
+		A9718F94225698AE002C07AD /* DynamicRowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicRowModel.m; sourceTree = "<group>"; };
 		A9718F95225698AE002C07AD /* DynamicBaseHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicBaseHeaderModel.h; sourceTree = "<group>"; };
-		A9718F96225698AE002C07AD /* DynamicBaseRowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicBaseRowModel.h; sourceTree = "<group>"; };
+		A9718F96225698AE002C07AD /* DynamicRowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicRowModel.h; sourceTree = "<group>"; };
 		A9718F98225698AE002C07AD /* DynamicEmptyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicEmptyHeader.h; sourceTree = "<group>"; };
 		A9718F99225698AE002C07AD /* DynamicSectionGroupHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicSectionGroupHeader.m; sourceTree = "<group>"; };
 		A9718F9A225698AE002C07AD /* CollapsibleHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapsibleHeader.m; sourceTree = "<group>"; };
@@ -42,6 +47,11 @@
 		A9718F9E225698AE002C07AD /* DynamicTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicTableView.h; sourceTree = "<group>"; };
 		A9718F9F225698AE002C07AD /* DynamicForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicForm.h; sourceTree = "<group>"; };
 		A9718FA0225698AE002C07AD /* DynamicTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicTableView.m; sourceTree = "<group>"; };
+		A9739FBD2259514600C7992E /* SingleLineHeaderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleLineHeaderModel.h; sourceTree = "<group>"; };
+		A9739FBE2259514600C7992E /* SingleLineHeaderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleLineHeaderModel.m; sourceTree = "<group>"; };
+		A9739FC52259530500C7992E /* SingleLineHeaderModel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleLineHeaderModel.xib; sourceTree = "<group>"; };
+		A9739FCC22595D3F00C7992E /* SingleLineRowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleLineRowModel.h; sourceTree = "<group>"; };
+		A9739FCD22595D3F00C7992E /* SingleLineRowModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleLineRowModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,7 @@
 				A9718FB02256A95D002C07AD /* Common */,
 				A9718FAF225698CB002C07AD /* DynamicTable */,
 				A9718F91225698AE002C07AD /* BaseTableElements */,
+				A9739FBA2259501200C7992E /* ExtendTableElements */,
 				A957D76622564A1F0088C37B /* A_DynamicTable.h */,
 				A957D76722564A1F0088C37B /* Info.plist */,
 			);
@@ -97,8 +108,8 @@
 			children = (
 				A9718F95225698AE002C07AD /* DynamicBaseHeaderModel.h */,
 				A9718F93225698AE002C07AD /* DynamicBaseHeaderModel.m */,
-				A9718F96225698AE002C07AD /* DynamicBaseRowModel.h */,
-				A9718F94225698AE002C07AD /* DynamicBaseRowModel.m */,
+				A9718F96225698AE002C07AD /* DynamicRowModel.h */,
+				A9718F94225698AE002C07AD /* DynamicRowModel.m */,
 			);
 			path = BaseElements;
 			sourceTree = "<group>";
@@ -134,6 +145,34 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		A9739FBA2259501200C7992E /* ExtendTableElements */ = {
+			isa = PBXGroup;
+			children = (
+				A9739FCB22595D2300C7992E /* SingleLineRow */,
+				A9739FBC2259511A00C7992E /* SingleLineHeader */,
+			);
+			path = ExtendTableElements;
+			sourceTree = "<group>";
+		};
+		A9739FBC2259511A00C7992E /* SingleLineHeader */ = {
+			isa = PBXGroup;
+			children = (
+				A9739FBD2259514600C7992E /* SingleLineHeaderModel.h */,
+				A9739FBE2259514600C7992E /* SingleLineHeaderModel.m */,
+				A9739FC52259530500C7992E /* SingleLineHeaderModel.xib */,
+			);
+			path = SingleLineHeader;
+			sourceTree = "<group>";
+		};
+		A9739FCB22595D2300C7992E /* SingleLineRow */ = {
+			isa = PBXGroup;
+			children = (
+				A9739FCC22595D3F00C7992E /* SingleLineRowModel.h */,
+				A9739FCD22595D3F00C7992E /* SingleLineRowModel.m */,
+			);
+			path = SingleLineRow;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -147,7 +186,9 @@
 				A9718FAB225698AE002C07AD /* CollapsibleHeader.h in Headers */,
 				A9718FAD225698AE002C07AD /* DynamicForm.h in Headers */,
 				A957D76822564A1F0088C37B /* A_DynamicTable.h in Headers */,
-				A9718FA5225698AE002C07AD /* DynamicBaseRowModel.h in Headers */,
+				A9739FBF2259514600C7992E /* SingleLineHeaderModel.h in Headers */,
+				A9739FCE22595D3F00C7992E /* SingleLineRowModel.h in Headers */,
+				A9718FA5225698AE002C07AD /* DynamicRowModel.h in Headers */,
 				A9718FA6225698AE002C07AD /* DynamicEmptyHeader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9739FC62259530500C7992E /* SingleLineHeaderModel.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +267,9 @@
 				A9718FAE225698AE002C07AD /* DynamicTableView.m in Sources */,
 				A9718FA8225698AE002C07AD /* CollapsibleHeader.m in Sources */,
 				A9718FA7225698AE002C07AD /* DynamicSectionGroupHeader.m in Sources */,
-				A9718FA3225698AE002C07AD /* DynamicBaseRowModel.m in Sources */,
+				A9739FCF22595D3F00C7992E /* SingleLineRowModel.m in Sources */,
+				A9739FC02259514600C7992E /* SingleLineHeaderModel.m in Sources */,
+				A9718FA3225698AE002C07AD /* DynamicRowModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -340,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

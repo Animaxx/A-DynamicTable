@@ -17,7 +17,7 @@
 
 @end
 
-@interface DynamicBaseRowModel()
+@interface DynamicRowModel()
 
 @property (nonatomic, weak) DynamicTableView *parentTableView;
 @property (nonatomic, weak) UIViewController *parentController;
@@ -108,7 +108,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DynamicBaseRowModel *model = [self.form getRow:indexPath];
+    DynamicRowModel *model = [self.form getRow:indexPath];
     [model setParentTableView:self];
     [model setParentController:[self findParentController]];
     [model setPathIndex:indexPath];
@@ -149,7 +149,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    DynamicBaseRowModel *model = [self.form getRow:indexPath];
+    DynamicRowModel *model = [self.form getRow:indexPath];
     [model setPathIndex:indexPath];
     [model onRowSelected];
 }
