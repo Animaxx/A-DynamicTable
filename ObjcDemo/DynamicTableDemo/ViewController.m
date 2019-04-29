@@ -22,12 +22,11 @@
     [super viewDidLoad];
     NSDictionary *dic = @{@"Demo create from storyboard": @"DemoStoryboardController"};
     
-    
     for (NSString *k in dic) {
         DynamicRowModel *row = [DynamicRowModel createRowWithSBIdentifier:@"cell"];
-        [row setCellDidLoadBlock:^(DynamicRowModel * _Nonnull rowModel, UITableViewCell * _Nonnull precell, DynamicTableView * _Nonnull tableView, UIViewController * _Nonnull controller) {
-            [precell.textLabel setText:k];
-            [precell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        [row setCellDidLoadBlock:^(DynamicRowModel * _Nonnull rowModel, UITableViewCell * _Nonnull cell, DynamicTableView * _Nonnull tableView, UIViewController * _Nonnull controller) {
+            [cell.textLabel setText:k];
+            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         }];
         [row setCellSelectedBlock:^(DynamicRowModel * _Nonnull rowModel, UITableViewCell * _Nonnull cell, DynamicTableView * _Nonnull tableView, UIViewController * _Nonnull controller) {
             

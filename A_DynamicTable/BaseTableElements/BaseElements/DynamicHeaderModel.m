@@ -6,9 +6,9 @@
 //  Copyright © 2018 Animax. All rights reserved.
 //
 
-#import "DynamicBaseHeaderModel.h"
+#import "DynamicHeaderModel.h"
 
-@interface DynamicBaseHeaderModel()
+@interface DynamicHeaderModel()
 
 @property (nonatomic, weak) UIViewController *parentController;
 @property (nonatomic, weak) DynamicTableView *parentTableView;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation DynamicBaseHeaderModel {
+@implementation DynamicHeaderModel {
     NSString *__sectionId;
 }
 
@@ -83,14 +83,14 @@
 
 + (instancetype)createHeaderWithBlock:(DynamicBeaderCreating)creationBlock {
     
-    DynamicBaseHeaderModel *model = [[[self class] alloc] init];
+    DynamicHeaderModel *model = [[[self class] alloc] init];
     [model setCreatingBlock:creationBlock];
     
     return model;
 }
 
 + (instancetype)createHeaderWithBlock:(DynamicBeaderCreating)creationBlock action:(DynamicHeaderSelected)selectedAction {
-    DynamicBaseHeaderModel *model = [[[self class] alloc] init];
+    DynamicHeaderModel *model = [[[self class] alloc] init];
     [model setCreatingBlock:creationBlock];
     [model setSelectedBlock:selectedAction];
     
@@ -99,7 +99,7 @@
 
 + (instancetype)createRowWithXIB:(NSString *)xibName {
     
-    DynamicBaseHeaderModel *model = [[[self class] alloc] init];
+    DynamicHeaderModel *model = [[[self class] alloc] init];
     [model setXibName:xibName];
     
     return model;
@@ -108,7 +108,7 @@
 + (instancetype)createRowWithXIB:(NSString *)xibName
                                          action:(DynamicHeaderSelected)selectedAction {
     
-    DynamicBaseHeaderModel *model = [[[self class] alloc] init];
+    DynamicHeaderModel *model = [[[self class] alloc] init];
     [model setXibName:xibName];
     [model setSelectedBlock:selectedAction];
     
@@ -119,7 +119,7 @@
                                   creationBlock:(DynamicHeaderCreatingWithPreheader)creationBlock
                                          action:(DynamicHeaderSelected)selectedAction {
     
-    DynamicBaseHeaderModel *model = [[[self class] alloc] init];
+    DynamicHeaderModel *model = [[[self class] alloc] init];
     [model setXibName:xibName];
     [model setCreatingBlockWithPreheader:creationBlock];
     [model setSelectedBlock:selectedAction];
@@ -130,7 +130,7 @@
 + (instancetype)createRowWithXIB:(NSString *)xibName
                                        creation:(DynamicHeaderCreatingWithPreheader)creatingBlock {
     
-    DynamicBaseHeaderModel *model = [[[self class] alloc] init];
+    DynamicHeaderModel *model = [[[self class] alloc] init];
     [model setXibName:xibName];
     [model setCreatingBlockWithPreheader:creatingBlock];
     
@@ -141,7 +141,7 @@
                                          bundle:(NSBundle *)bundle
                                        creation:(DynamicHeaderCreatingWithPreheader)creatingBlock {
     
-    DynamicBaseHeaderModel *model = [[[self class] alloc] init];
+    DynamicHeaderModel *model = [[[self class] alloc] init];
     [model setXibName:xibName];
     [model setHeaderBundle:bundle];
     [model setCreatingBlockWithPreheader:creatingBlock];
@@ -154,7 +154,7 @@
                                        creation:(DynamicHeaderCreatingWithPreheader)creatingBlock
                                          action:(DynamicHeaderSelected)selectedAction {
     
-    DynamicBaseHeaderModel *model = [[[self class] alloc] init];
+    DynamicHeaderModel *model = [[[self class] alloc] init];
     [model setXibName:xibName];
     [model setHeaderBundle:bundle];
     [model setCreatingBlockWithPreheader:creatingBlock];

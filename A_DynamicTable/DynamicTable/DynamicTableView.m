@@ -10,7 +10,7 @@
 #import "CollapsibleHeader.h"
 #import "DynamicSectionGroupHeader.h"
 
-@interface DynamicBaseHeaderModel()
+@interface DynamicHeaderModel()
 
 @property (nonatomic, weak) DynamicTableView *parentTableView;
 @property (nonatomic, weak) UIViewController *parentController;
@@ -99,7 +99,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    DynamicBaseHeaderModel *header = [self.form getHeaderAtIndex:section];
+    DynamicHeaderModel *header = [self.form getHeaderAtIndex:section];
     if ([header isKindOfClass:[CollapsibleHeader class]] && ((CollapsibleHeader *)header).isCollapsed) {
         return 0;
     } else {
@@ -117,7 +117,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
-    DynamicBaseHeaderModel *sectionModel = [self.form getHeaderAtIndex:section];
+    DynamicHeaderModel *sectionModel = [self.form getHeaderAtIndex:section];
     [sectionModel setSectionIndex:section];
     [sectionModel setParentTableView:self];
     [sectionModel setParentController:[self findParentController]];
@@ -130,7 +130,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    DynamicBaseHeaderModel *sectionModel = [self.form getHeaderAtIndex:section];
+    DynamicHeaderModel *sectionModel = [self.form getHeaderAtIndex:section];
     [sectionModel setSectionIndex:section];
     [sectionModel setParentTableView:self];
     [sectionModel setParentController:[self findParentController]];
@@ -172,7 +172,7 @@
 }
 - (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
     if ([self.form isGroupSectionTable]) {
-        NSArray<DynamicBaseHeaderModel *> *headers = [self.form allHeaders];
+        NSArray<DynamicHeaderModel *> *headers = [self.form allHeaders];
         NSMutableOrderedSet *titles = [[NSMutableOrderedSet alloc] init];
         
         for (DynamicSectionGroupHeader *item in headers) {
@@ -186,6 +186,7 @@
         return @[];
     }
 }
+
 
 
 @end

@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DynamicBaseHeaderModel.h"
+#import "DynamicHeaderModel.h"
 
-@interface DynamicEmptyHeader : DynamicBaseHeaderModel
+@interface DynamicEmptyHeader : DynamicHeaderModel
 
 + (instancetype)create;
 

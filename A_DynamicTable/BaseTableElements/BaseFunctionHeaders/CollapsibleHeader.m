@@ -9,7 +9,7 @@
 #import "CollapsibleHeader.h"
 #import "DynamicTableView.h"
 
-@interface DynamicBaseHeaderModel()
+@interface DynamicHeaderModel()
 
 @property (nonatomic, weak) UIViewController *parentController;
 @property (nonatomic, weak) DynamicTableView *parentTableView;

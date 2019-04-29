@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DynamicBaseHeaderModel.h"
+#import "DynamicHeaderModel.h"
 
-@interface DynamicSectionGroupHeader : DynamicBaseHeaderModel
+@interface DynamicSectionGroupHeader : DynamicHeaderModel
 
 @property (nonatomic, strong) NSString *sectionName;
 

@@ -58,10 +58,8 @@
             cell = [(UITableView *)self.parentTableView dequeueReusableCellWithIdentifier:self.SBIdentifier forIndexPath:self.pathIndex];
             if (!cell) {
                 NSLog(@"DynamicCell: Storyboard cell %@ is not able to load", self.SBIdentifier);
-            } else if (self.currectDynamicCell && cell && self.currectDynamicCell == cell) {
-                // TODO:
-                return cell;
             }
+            
             if (self.cellDidLoadBlock) {
                 self.cellDidLoadBlock(self, cell, self.parentTableView, controller);
             }

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DynamicBaseHeaderModel.h"
+#import "DynamicHeaderModel.h"
 #import "DynamicRowModel.h"
 
 /**
@@ -18,21 +18,21 @@
 @property (readonly) NSUInteger count;
 @property (readonly, nonatomic) BOOL isGroupSectionTable;
 
-- (nullable NSMutableArray<DynamicRowModel *> *)objectForHeader:(nonnull DynamicBaseHeaderModel *)aKey;
-- (void)insertRowGroup:(nonnull NSMutableArray<DynamicRowModel *> *)rowGroup forHeader:(nonnull DynamicBaseHeaderModel *)aHeader atIndex:(NSUInteger)anIndex;
-- (void)setRowGroup:(nonnull NSMutableArray<DynamicRowModel *> *)rowGroup forHeader:(nonnull DynamicBaseHeaderModel *)aHeader;
-- (void)removeRowsForHeader:(nonnull DynamicBaseHeaderModel *)aKey;
+- (nullable NSMutableArray<DynamicRowModel *> *)objectForHeader:(nonnull DynamicHeaderModel *)aKey;
+- (void)insertRowGroup:(nonnull NSMutableArray<DynamicRowModel *> *)rowGroup forHeader:(nonnull DynamicHeaderModel *)aHeader atIndex:(NSUInteger)anIndex;
+- (void)setRowGroup:(nonnull NSMutableArray<DynamicRowModel *> *)rowGroup forHeader:(nonnull DynamicHeaderModel *)aHeader;
+- (void)removeRowsForHeader:(nonnull DynamicHeaderModel *)aKey;
 - (void)removeRowsAtSectionIndex:(NSUInteger)index;
 
-- (nullable DynamicBaseHeaderModel *)lastHeader;
-- (nullable DynamicBaseHeaderModel *)firstHeader;
-- (nullable DynamicBaseHeaderModel *)getHeaderAtIndex:(NSInteger)index;
+- (nullable DynamicHeaderModel *)lastHeader;
+- (nullable DynamicHeaderModel *)firstHeader;
+- (nullable DynamicHeaderModel *)getHeaderAtIndex:(NSInteger)index;
 
 - (nullable NSArray<DynamicRowModel *> *)lastSectionOfRows;
 - (nullable NSArray<DynamicRowModel *> *)firstSectionOfRows;
 - (nullable NSArray<DynamicRowModel *> *)rowsAtIndex:(NSInteger)index;
 
-- (nonnull NSArray<DynamicBaseHeaderModel *> *)allHeaders;
+- (nonnull NSArray<DynamicHeaderModel *> *)allHeaders;
 - (nonnull NSArray<DynamicRowModel *> *)allRows;
 
 /**
@@ -75,7 +75,7 @@
  @param row DynamicRowModel
  @param section NSInteger
  */
-- (nonnull DynamicForm *)addRow:(nonnull DynamicRowModel *)row toSection:(nonnull DynamicBaseHeaderModel *)section;
+- (nonnull DynamicForm *)addRow:(nonnull DynamicRowModel *)row toSection:(nonnull DynamicHeaderModel *)section;
 
 
 /**
@@ -83,7 +83,7 @@
 
  @param section DynamicBaseHeaderModel
  */
-- (nonnull DynamicForm *)addSection:(nonnull DynamicBaseHeaderModel *)section;
+- (nonnull DynamicForm *)addSection:(nonnull DynamicHeaderModel *)section;
 
 
 /**

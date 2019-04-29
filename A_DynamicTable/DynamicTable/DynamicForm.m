@@ -10,7 +10,7 @@
 #import "DynamicEmptyHeader.h"
 #import "DynamicSectionGroupHeader.h"
 
-@interface DynamicBaseHeaderModel()
+@interface DynamicHeaderModel()
 
 @property (readonly, nonatomic) NSString *sectionId;
 
@@ -20,7 +20,7 @@
 
 @property (readwrite, nonatomic) BOOL isGroupSectionTable;
 @property (strong, nonatomic) NSMutableOrderedSet<NSString *> *sectionKeys;
-@property (strong, nonatomic) NSMapTable<NSString *, DynamicBaseHeaderModel *> *headerModels;
+@property (strong, nonatomic) NSMapTable<NSString *, DynamicHeaderModel *> *headerModels;
 @property (strong, nonatomic) NSMapTable<NSString *, NSMutableArray<DynamicRowModel *> *> *rowModelGroups;
 
 @end
@@ -42,10 +42,10 @@
 - (NSUInteger)count {
     return [self.sectionKeys count];
 }
-- (NSMutableArray<DynamicRowModel *> *)objectForHeader:(DynamicBaseHeaderModel *)aKey {
+- (NSMutableArray<DynamicRowModel *> *)objectForHeader:(DynamicHeaderModel *)aKey {
     return [self.rowModelGroups objectForKey:aKey.sectionId];
 }
-- (void)insertRowGroup:(NSMutableArray<DynamicRowModel *> *)rowGroup forHeader:(DynamicBaseHeaderModel *)aHeader atIndex:(NSUInteger)anIndex {
+- (void)insertRowGroup:(NSMutableArray<DynamicRowModel *> *)rowGroup forHeader:(DynamicHeaderModel *)aHeader atIndex:(NSUInteger)anIndex {
     [self.sectionKeys setObject:aHeader.sectionId atIndex:anIndex];
     [self.headerModels setObject:aHeader forKey:aHeader.sectionId];
     [self.rowModelGroups setObject:rowGroup forKey:aHeader.sectionId];
@@ -54,7 +54,7 @@
         self.isGroupSectionTable = YES;
     }
 }
-- (void)setRowGroup:(NSMutableArray<DynamicRowModel *> *)rowGroup forHeader:(DynamicBaseHeaderModel *)aHeader {
+- (void)setRowGroup:(NSMutableArray<DynamicRowModel *> *)rowGroup forHeader:(DynamicHeaderModel *)aHeader {
     [self.sectionKeys addObject:aHeader.sectionId];
     [self.headerModels setObject:aHeader forKey:aHeader.sectionId];
     [self.rowModelGroups setObject:rowGroup forKey:aHeader.sectionId];
@@ -63,7 +63,7 @@
         self.isGroupSectionTable = YES;
     }
 }
-- (void)removeRowsForHeader:(DynamicBaseHeaderModel *)aKey {
+- (void)removeRowsForHeader:(DynamicHeaderModel *)aKey {
     [self.sectionKeys removeObject:aKey.sectionId];
     [self.headerModels removeObjectForKey:aKey.sectionId];
     [self.rowModelGroups removeObjectForKey:aKey.sectionId];
@@ -85,7 +85,7 @@
     self.isGroupSectionTable = NO;
 }
 
-- (NSArray<DynamicBaseHeaderModel *> *)allHeaders {
+- (NSArray<DynamicHeaderModel *> *)allHeaders {
     NSMutableArray *headers = [[NSMutableArray alloc] init];
     for (NSString *key in self.sectionKeys) {
         [headers addObject:[self.headerModels objectForKey:key]];
@@ -93,19 +93,19 @@
     return headers;
 }
 
-- (DynamicBaseHeaderModel *)lastHeader {
+- (DynamicHeaderModel *)lastHeader {
     if ([self.headerModels count] == 0) {
         return nil;
     }
     return [self.headerModels objectForKey:[self.sectionKeys lastObject]];
 }
-- (DynamicBaseHeaderModel *)firstHeader {
+- (DynamicHeaderModel *)firstHeader {
     if ([self.headerModels count] == 0) {
         return nil;
     }
     return [self.headerModels objectForKey:[self.sectionKeys firstObject]];
 }
-- (DynamicBaseHeaderModel *)getHeaderAtIndex:(NSInteger)index {
+- (DynamicHeaderModel *)getHeaderAtIndex:(NSInteger)index {
     NSString *key = [self.sectionKeys objectAtIndex:index];
     return key ? [self.headerModels objectForKey:key] : nil;
 }
@@ -182,13 +182,13 @@
     
     return self;
 }
-- (DynamicForm *)addRow:(DynamicRowModel *)row toSection:(DynamicBaseHeaderModel *)section {
+- (DynamicForm *)addRow:(DynamicRowModel *)row toSection:(DynamicHeaderModel *)section {
     [[self objectForHeader:section] addObject:row];
     [row setup];
     
     return self;
 }
-- (DynamicForm *)addSection:(DynamicBaseHeaderModel *)section {
+- (DynamicForm *)addSection:(DynamicHeaderModel *)section {
     NSString *key = section.sectionId;
     if ([self.sectionKeys containsObject:key]) {
         NSLog(@"[ERROR] Section already exisit in DynamicForm - addSection:");

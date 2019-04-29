@@ -13,11 +13,12 @@
 
 typedef void (^DynamicRowSelectedBlock) (DynamicRowModel *_Nonnull rowModel, UITableViewCell *_Nonnull cell, DynamicTableView *_Nonnull tableView, UIViewController *_Nonnull controller);
 
-typedef void (^DynamicRowCellDidLoadBlock) (DynamicRowModel *_Nonnull rowModel, UITableViewCell *_Nonnull precell, DynamicTableView *_Nonnull tableView, UIViewController *_Nonnull controller);
+typedef void (^DynamicRowCellDidLoadBlock) (DynamicRowModel *_Nonnull rowModel, UITableViewCell *_Nonnull cell, DynamicTableView *_Nonnull tableView, UIViewController *_Nonnull controller);
 typedef UITableViewCell *_Nonnull(^DynamicRowCellCreateBlock) (DynamicRowModel *_Nonnull rowModel, DynamicTableView *_Nonnull tableView, UIViewController *_Nonnull controller);
 
 
-@interface DynamicRowModel : NSObject
+//@interface DynamicRowModel<__covariant CellType:UITableViewCell *> : NSObject
+@interface DynamicRowModel: NSObject
 
 @property (nullable, readonly, nonatomic, weak) UIViewController *parentController;
 @property (nullable, readonly, nonatomic, weak) DynamicTableView *parentTableView;

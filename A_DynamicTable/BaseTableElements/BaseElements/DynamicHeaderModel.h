@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@class DynamicBaseHeaderModel, DynamicTableView;
+@class DynamicHeaderModel, DynamicTableView;
 
-typedef UIView *(^DynamicBeaderCreating) (DynamicBaseHeaderModel *headerModel, DynamicTableView *tableView, UIViewController *controller);
-typedef void (^DynamicHeaderCreatingWithPreheader) (DynamicBaseHeaderModel *headerModel, UIView *headerView, DynamicTableView *tableView, UIViewController *controller);
+typedef UIView *(^DynamicBeaderCreating) (DynamicHeaderModel *headerModel, DynamicTableView *tableView, UIViewController *controller);
+typedef void (^DynamicHeaderCreatingWithPreheader) (DynamicHeaderModel *headerModel, UIView *headerView, DynamicTableView *tableView, UIViewController *controller);
 
-typedef void (^DynamicHeaderSelected) (DynamicBaseHeaderModel *headerModel, UIView *headerView, DynamicTableView *tableView, UIViewController *controller);
+typedef void (^DynamicHeaderSelected) (DynamicHeaderModel *headerModel, UIView *headerView, DynamicTableView *tableView, UIViewController *controller);
 
 
-@interface DynamicBaseHeaderModel : NSObject
+@interface DynamicHeaderModel : NSObject
 
 @property (readonly, nonatomic, weak) UIViewController *parentController;
 @property (readonly, nonatomic, weak) DynamicTableView *parentTableView;

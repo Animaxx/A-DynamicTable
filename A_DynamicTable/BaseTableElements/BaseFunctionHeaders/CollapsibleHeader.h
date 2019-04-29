@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DynamicBaseHeaderModel.h"
+#import "DynamicHeaderModel.h"
 
-@interface CollapsibleHeader : DynamicBaseHeaderModel
+@interface CollapsibleHeader : DynamicHeaderModel
 
 @property (nonatomic, assign) BOOL isCollapsed;
 - (void)triggerCollapsed;
