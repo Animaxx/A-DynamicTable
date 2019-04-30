@@ -10,9 +10,6 @@
 
 @interface StoryboardCustomCell()
 
-//@property (weak, nonatomic) UILabel *label1;
-//@property (weak, nonatomic) UILabel *label2;
-
 @end
 
 @implementation StoryboardCustomCell

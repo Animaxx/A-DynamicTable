@@ -6,17 +6,17 @@
 //  Copyright © 2019 Animax. All rights reserved.
 //
 
-#import "DemoStoryboardController.h"
+#import "StoryboardCellController.h"
 #import <A_DynamicTable/A_DynamicTable.h>
 #import "StoryboardCustomCell.h"
 
-@interface DemoStoryboardController ()
+@interface StoryboardCellController ()
 
 @property (weak, nonatomic) IBOutlet DynamicTableView *tableView;
 
 @end
 
-@implementation DemoStoryboardController
+@implementation StoryboardCellController
 
 - (NSString *)title {
     return @"Create with storyboard";

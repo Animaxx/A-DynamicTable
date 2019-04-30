@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="443" y="183"/>
         </scene>
-        <!--Demo Storyboard Controller-->
+        <!--Storyboard Cell Controller-->
         <scene sceneID="nz1-Eo-7jQ">
             <objects>
-                <viewController storyboardIdentifier="DemoStoryboardController" id="gsa-Jp-OIz" customClass="DemoStoryboardController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DemoStoryboardController" id="gsa-Jp-OIz" customClass="StoryboardCellController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sLw-Me-gYd"/>
                         <viewControllerLayoutGuide type="bottom" id="9yV-bc-kzG"/>

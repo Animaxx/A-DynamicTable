@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <A_DynamicTable/A_DynamicTable.h>
-#import "DemoStoryboardController.h"
+#import "StoryboardCellController.h"
 
 @interface ViewController ()
 

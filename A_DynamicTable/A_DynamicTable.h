@@ -17,7 +17,7 @@ FOUNDATION_EXPORT const unsigned char A_DynamicTableVersionString[];
 #import "DynamicForm.h"
 #import "DynamicTableView.h"
 
-#import "DynamicBaseHeaderModel.h"
+#import "DynamicHeaderModel.h"
 #import "DynamicRowModel.h"
 
 #import "DynamicEmptyHeader.h"

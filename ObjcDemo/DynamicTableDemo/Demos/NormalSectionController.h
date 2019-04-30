@@ -1,8 +1,8 @@
 //
-//  DemoStoryboardController.h
+//  NormalSectionController.h
 //  DynamicTableDemo
 //
-//  Created by Animax Deng on 4/14/19.
+//  Created by Animax Deng on 4/29/19.
 //  Copyright © 2019 Animax. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DemoStoryboardController : UIViewController
+@interface NormalSectionController : UIViewController
 
 @end
 

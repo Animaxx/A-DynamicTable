@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A907620422778C65002E9418 /* StoryboardCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A907620322778C65002E9418 /* StoryboardCustomCell.m */; };
+		A90762072277A050002E9418 /* NormalSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90762062277A050002E9418 /* NormalSectionController.m */; };
 		A9739FA32258387500C7992E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9739FA22258387500C7992E /* AppDelegate.m */; };
 		A9739FA62258387500C7992E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9739FA52258387500C7992E /* ViewController.m */; };
 		A9739FA92258387500C7992E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9739FA72258387500C7992E /* Main.storyboard */; };
@@ -16,7 +17,7 @@
 		A9739FB12258387700C7992E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9739FB02258387700C7992E /* main.m */; };
 		A9739FC8225956DC00C7992E /* A_DynamicTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9739FC7225956DC00C7992E /* A_DynamicTable.framework */; };
 		A9739FC9225956DC00C7992E /* A_DynamicTable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9739FC7225956DC00C7992E /* A_DynamicTable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A97BEE35226432EF00A03EE5 /* DemoStoryboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97BEE34226432EF00A03EE5 /* DemoStoryboardController.m */; };
+		A97BEE35226432EF00A03EE5 /* StoryboardCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97BEE34226432EF00A03EE5 /* StoryboardCellController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +37,8 @@
 /* Begin PBXFileReference section */
 		A907620222778C65002E9418 /* StoryboardCustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryboardCustomCell.h; sourceTree = "<group>"; };
 		A907620322778C65002E9418 /* StoryboardCustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryboardCustomCell.m; sourceTree = "<group>"; };
+		A90762052277A050002E9418 /* NormalSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalSectionController.h; sourceTree = "<group>"; };
+		A90762062277A050002E9418 /* NormalSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalSectionController.m; sourceTree = "<group>"; };
 		A9739F9E2258387500C7992E /* DynamicTableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicTableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9739FA12258387500C7992E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9739FA22258387500C7992E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -47,8 +50,8 @@
 		A9739FAF2258387700C7992E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9739FB02258387700C7992E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A9739FC7225956DC00C7992E /* A_DynamicTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = A_DynamicTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A97BEE33226432EF00A03EE5 /* DemoStoryboardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoStoryboardController.h; sourceTree = "<group>"; };
-		A97BEE34226432EF00A03EE5 /* DemoStoryboardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoStoryboardController.m; sourceTree = "<group>"; };
+		A97BEE33226432EF00A03EE5 /* StoryboardCellController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryboardCellController.h; sourceTree = "<group>"; };
+		A97BEE34226432EF00A03EE5 /* StoryboardCellController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryboardCellController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				A97BEE3A22652D5900A03EE5 /* CustomRows */,
-				A97BEE33226432EF00A03EE5 /* DemoStoryboardController.h */,
-				A97BEE34226432EF00A03EE5 /* DemoStoryboardController.m */,
+				A97BEE33226432EF00A03EE5 /* StoryboardCellController.h */,
+				A97BEE34226432EF00A03EE5 /* StoryboardCellController.m */,
+				A90762052277A050002E9418 /* NormalSectionController.h */,
+				A90762062277A050002E9418 /* NormalSectionController.m */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -189,9 +194,10 @@
 			files = (
 				A9739FA62258387500C7992E /* ViewController.m in Sources */,
 				A907620422778C65002E9418 /* StoryboardCustomCell.m in Sources */,
+				A90762072277A050002E9418 /* NormalSectionController.m in Sources */,
 				A9739FB12258387700C7992E /* main.m in Sources */,
 				A9739FA32258387500C7992E /* AppDelegate.m in Sources */,
-				A97BEE35226432EF00A03EE5 /* DemoStoryboardController.m in Sources */,
+				A97BEE35226432EF00A03EE5 /* StoryboardCellController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
