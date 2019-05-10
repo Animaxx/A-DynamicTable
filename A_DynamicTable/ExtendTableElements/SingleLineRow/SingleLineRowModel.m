@@ -8,7 +8,9 @@
 
 #import "SingleLineRowModel.h"
 
-@implementation SingleLineRowModel
+@implementation SingleLineRowModel {
+    NSString *lineText;
+}
 
 - (instancetype)init
 {
@@ -17,6 +19,15 @@
         
     }
     return self;
+}
+
++ (SingleLineRowModel *)createWithText:(NSString *)text {
+    SingleLineRowModel *row = [[SingleLineRowModel alloc] init];
+    row->lineText = text;
+    return row;
+}
+- (void)cellDidLoad:(UITableViewCell *)cell {
+    [cell.textLabel setText:self->lineText];
 }
 
 @end

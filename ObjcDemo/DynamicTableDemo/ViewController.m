@@ -20,7 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSDictionary *dic = @{@"Demo create from storyboard": @"DemoStoryboardController"};
+    NSDictionary *dic = @{@"Demo create from storyboard": @"DemoStoryboardController",
+                          @"Demo normal sections": @"NormalSectionController"};
     
     for (NSString *k in dic) {
         DynamicRowModel *row = [DynamicRowModel createRowWithSBIdentifier:@"cell"];

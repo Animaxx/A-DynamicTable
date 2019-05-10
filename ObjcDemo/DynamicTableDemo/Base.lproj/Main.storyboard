@@ -174,6 +174,39 @@
             </objects>
             <point key="canvasLocation" x="1156" y="182"/>
         </scene>
+        <!--Normal Section Controller-->
+        <scene sceneID="F0q-zc-fDd">
+            <objects>
+                <viewController storyboardIdentifier="NormalSectionController" id="LGc-Nw-Mcq" customClass="NormalSectionController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gGu-Fm-hCV"/>
+                        <viewControllerLayoutGuide type="bottom" id="YBr-ao-Qsc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x1r-eb-xdA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4HE-3R-QCv" customClass="DynamicTableView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YBr-ao-Qsc" firstAttribute="top" secondItem="4HE-3R-QCv" secondAttribute="bottom" id="4Cm-mh-jTs"/>
+                            <constraint firstItem="4HE-3R-QCv" firstAttribute="top" secondItem="gGu-Fm-hCV" secondAttribute="bottom" id="GWh-DG-t32"/>
+                            <constraint firstItem="4HE-3R-QCv" firstAttribute="leading" secondItem="x1r-eb-xdA" secondAttribute="leading" id="UgE-d6-UR8"/>
+                            <constraint firstAttribute="trailing" secondItem="4HE-3R-QCv" secondAttribute="trailing" id="f0r-C4-iA5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="4HE-3R-QCv" id="cbg-Lj-8o8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Obw-2G-gDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1842.4000000000001" y="181.25937031484258"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="AFU-O4-98S">
             <objects>
