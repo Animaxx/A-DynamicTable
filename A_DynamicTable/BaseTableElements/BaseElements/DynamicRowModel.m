@@ -31,28 +31,32 @@
     if (self.parentTableView) {
         UIViewController *controller = [self parentController];
         
-        if (self.xibName && [self.xibName length] > 0) {
-            if (cell) {
-                return cell;
-            }
-            
-            NSBundle *bundle = self.cellBundle;
-            if (!bundle) {
-                bundle = [NSBundle mainBundle];
-            }
-            
-            id owner = controller;
-            if (!owner) {
-                owner = self;
-            }
-            cell = [[bundle loadNibNamed:self.xibName owner:owner options:nil] firstObject];
-            
+        if (!cell && self.xibName && [self.xibName length] > 0) {
+            self.SBIdentifier = [self.xibName stringByAppendingString:@"-identifier"];
+            cell = [(UITableView *)self.parentTableView dequeueReusableCellWithIdentifier:self.SBIdentifier];
             if (!cell) {
-                NSLog(@"DynamicCell: XIB %@ is not able to load", self.xibName);
-            }
-            
-            if (self.cellDidLoadBlock) {
-                self.cellDidLoadBlock(self, cell, self.parentTableView, controller);
+                NSBundle *bundle = self.cellBundle;
+                if (!bundle) {
+                    bundle = [NSBundle mainBundle];
+                }
+                
+                id owner = controller;
+                if (!owner) {
+                    owner = self;
+                }
+                
+                // load xib cell from bundle
+                // cell = [[bundle loadNibNamed:self.xibName owner:owner options:nil] firstObject];
+                
+                UINib *cellNib = [UINib nibWithNibName:self.xibName bundle:bundle];
+                
+                [(UITableView *)self.parentTableView registerNib:cellNib forCellReuseIdentifier:self.SBIdentifier];
+                
+                cell = [(UITableView *)self.parentTableView dequeueReusableCellWithIdentifier:self.SBIdentifier forIndexPath:self.pathIndex];
+                
+                if (!cell) {
+                    NSLog(@"DynamicCell: XIB %@ is not able to load", self.xibName);
+                }
             }
         } else if (self.SBIdentifier && [self.SBIdentifier length] > 0) {
             cell = [(UITableView *)self.parentTableView dequeueReusableCellWithIdentifier:self.SBIdentifier forIndexPath:self.pathIndex];
@@ -60,21 +64,19 @@
                 NSLog(@"DynamicCell: Storyboard cell %@ is not able to load", self.SBIdentifier);
             }
             
-            if (self.cellDidLoadBlock) {
-                self.cellDidLoadBlock(self, cell, self.parentTableView, controller);
-            }
-        } else if (self.cellCreateBlock) {
-            if (cell) {
-                return cell;
-            }
-            
+        } else if (!cell && self.cellCreateBlock) {
             cell = self.cellCreateBlock(self, self.parentTableView, controller);
-            if (self.cellDidLoadBlock) {
-                self.cellDidLoadBlock(self, cell, self.parentTableView, controller);
-            }
+        } else if (!cell && [self respondsToSelector:@selector(onCreateDynamicRowCell)]) {
+            cell = [self onCreateDynamicRowCell];
         }
         
-        if (cell) {
+        if (!cell) {
+            cell = [[UITableViewCell alloc] init];
+        }
+        
+        if (self.cellDidLoadBlock) {
+            self.cellDidLoadBlock(self, cell, self.parentTableView, controller);
+        } else {
             [self cellDidLoad:cell];
         }
     }
@@ -101,6 +103,9 @@
 }
 - (void)cellDidLoad: (UITableViewCell *)cell {
     
+}
+- (UITableViewCell *) onCreateDynamicRowCell {
+    return nil;
 }
 
 + (instancetype)createRowWithBlock:(DynamicRowCellCreateBlock)creationBlock action:(DynamicRowSelectedBlock)selectedBlock {
@@ -140,23 +145,23 @@
 
 + (instancetype)createRowWithXIB:(NSString *)xibName
                           bundle:(NSBundle *)bundle
-                        creation:(DynamicRowCellDidLoadBlock)creatingBlock
+                     cellDidLoad:(DynamicRowCellDidLoadBlock)cellDidLoadBlock
                           action:(DynamicRowSelectedBlock)selectedBlock {
     DynamicRowModel *model = [[[self class] alloc] init];
     [model setCellBundle:bundle];
     [model setXibName:xibName];
-    [model setCellDidLoadBlock:creatingBlock];
+    [model setCellDidLoadBlock:cellDidLoadBlock];
     [model setCellSelectedBlock:selectedBlock];
     
     return model;
 }
 
 + (instancetype)createRowWithXIB:(NSString *)xibName
-                        creation:(DynamicRowCellDidLoadBlock)creatingBlock
+                     cellDidLoad:(DynamicRowCellDidLoadBlock)cellDidLoadBlock
                           action:(DynamicRowSelectedBlock)selectedBlock {
     DynamicRowModel *model = [[[self class] alloc] init];
     [model setXibName:xibName];
-    [model setCellDidLoadBlock:creatingBlock];
+    [model setCellDidLoadBlock:cellDidLoadBlock];
     [model setCellSelectedBlock:selectedBlock];
     
     return model;

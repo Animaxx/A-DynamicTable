@@ -26,6 +26,8 @@
     row->lineText = text;
     return row;
 }
+
+
 - (void)cellDidLoad:(UITableViewCell *)cell {
     [cell.textLabel setText:self->lineText];
 }

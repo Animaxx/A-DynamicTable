@@ -18,6 +18,8 @@
 		A9739FC8225956DC00C7992E /* A_DynamicTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9739FC7225956DC00C7992E /* A_DynamicTable.framework */; };
 		A9739FC9225956DC00C7992E /* A_DynamicTable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9739FC7225956DC00C7992E /* A_DynamicTable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A97BEE35226432EF00A03EE5 /* StoryboardCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97BEE34226432EF00A03EE5 /* StoryboardCellController.m */; };
+		A9A31EEB2290D33000F13DD4 /* XIBellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A31EEA2290D33000F13DD4 /* XIBellViewController.m */; };
+		A9A31EEE22910CF900F13DD4 /* CustomXIBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A31EED22910CF900F13DD4 /* CustomXIBCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +54,9 @@
 		A9739FC7225956DC00C7992E /* A_DynamicTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = A_DynamicTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97BEE33226432EF00A03EE5 /* StoryboardCellController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryboardCellController.h; sourceTree = "<group>"; };
 		A97BEE34226432EF00A03EE5 /* StoryboardCellController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryboardCellController.m; sourceTree = "<group>"; };
+		A9A31EE92290D33000F13DD4 /* XIBCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XIBCellViewController.h; sourceTree = "<group>"; };
+		A9A31EEA2290D33000F13DD4 /* XIBellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XIBellViewController.m; sourceTree = "<group>"; };
+		A9A31EED22910CF900F13DD4 /* CustomXIBCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomXIBCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +108,14 @@
 		A97BEE322264327800A03EE5 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				A9A31EEC2290D95B00F13DD4 /* XIBCells */,
 				A97BEE3A22652D5900A03EE5 /* CustomRows */,
 				A97BEE33226432EF00A03EE5 /* StoryboardCellController.h */,
 				A97BEE34226432EF00A03EE5 /* StoryboardCellController.m */,
 				A90762052277A050002E9418 /* NormalSectionController.h */,
 				A90762062277A050002E9418 /* NormalSectionController.m */,
+				A9A31EE92290D33000F13DD4 /* XIBCellViewController.h */,
+				A9A31EEA2290D33000F13DD4 /* XIBellViewController.m */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -119,6 +127,14 @@
 				A907620322778C65002E9418 /* StoryboardCustomCell.m */,
 			);
 			path = CustomRows;
+			sourceTree = "<group>";
+		};
+		A9A31EEC2290D95B00F13DD4 /* XIBCells */ = {
+			isa = PBXGroup;
+			children = (
+				A9A31EED22910CF900F13DD4 /* CustomXIBCell.xib */,
+			);
+			path = XIBCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A31EEE22910CF900F13DD4 /* CustomXIBCell.xib in Resources */,
 				A9739FAE2258387700C7992E /* LaunchScreen.storyboard in Resources */,
 				A9739FAB2258387700C7992E /* Assets.xcassets in Resources */,
 				A9739FA92258387500C7992E /* Main.storyboard in Resources */,
@@ -193,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9739FA62258387500C7992E /* ViewController.m in Sources */,
+				A9A31EEB2290D33000F13DD4 /* XIBellViewController.m in Sources */,
 				A907620422778C65002E9418 /* StoryboardCustomCell.m in Sources */,
 				A90762072277A050002E9418 /* NormalSectionController.m in Sources */,
 				A9739FB12258387700C7992E /* main.m in Sources */,
@@ -340,13 +358,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 89JX2WC4SS;
+				DEVELOPMENT_TEAM = WXJ2GL3BHY;
 				INFOPLIST_FILE = DynamicTableDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.animax.DynamicTableDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = demo.animax.DynamicTableDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -357,13 +375,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 89JX2WC4SS;
+				DEVELOPMENT_TEAM = WXJ2GL3BHY;
 				INFOPLIST_FILE = DynamicTableDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.animax.DynamicTableDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = demo.animax.DynamicTableDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

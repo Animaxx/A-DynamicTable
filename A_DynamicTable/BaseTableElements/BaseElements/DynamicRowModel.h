@@ -37,18 +37,27 @@ typedef UITableViewCell *_Nonnull(^DynamicRowCellCreateBlock) (DynamicRowModel *
 - (void)setup;
 
 /**
- Abstract method - will call every time when cell loaded under tableView:cellForRowAtIndexPath
- The function is same as cellDidLoadBlock with higher priority
+ Abstract method - call every time when cell loaded under tableView:cellForRowAtIndexPath
+ The function is same as **cellDidLoadBlock** with higher priority
  @param cell UITableViewCell
  */
 - (void)cellDidLoad: (nonnull UITableViewCell *)cell;
 
 
 /**
- Abstract method - will call every time when user tap on cell under tableView:didSelectRowAtIndexPath
- The Function is same as cellSelectedBlock with higher priority
+ Abstract method - call every time when user tap on cell under tableView:didSelectRowAtIndexPath
+ The Function is same as **cellSelectedBlock** with higher priority
  */
 - (void)onRowSelected;
+
+
+/**
+ Abstract method - for create cell from code
+ The Function is same as **cellCreateBlock** with lower priority
+ 
+ @return UITableViewCell
+ */
+- (nullable UITableViewCell *) onCreateDynamicRowCell;
 
 #pragma mark - action blocks
 
@@ -85,19 +94,19 @@ typedef UITableViewCell *_Nonnull(^DynamicRowCellCreateBlock) (DynamicRowModel *
 
 + (nonnull instancetype)createRowWithXIB:(nonnull NSString *)xibName
                                   bundle:(nonnull NSBundle *)bundle
-                                  action:(nonnull DynamicRowSelectedBlock)selectedBlock;
+                                  action:(nullable DynamicRowSelectedBlock)selectedBlock;
 
 + (nonnull instancetype)createRowWithXIB:(nonnull NSString *)xibName
                                   bundle:(nonnull NSBundle *)bundle
-                                creation:(nonnull DynamicRowCellDidLoadBlock)creatingBlock
-                                  action:(nonnull DynamicRowSelectedBlock)selectedBlock;
+                             cellDidLoad:(nonnull DynamicRowCellDidLoadBlock)cellDidLoadBlock
+                                  action:(nullable DynamicRowSelectedBlock)selectedBlock;
 
 + (nonnull instancetype)createRowWithXIB:(nonnull NSString *)xibName
-                                creation:(nonnull DynamicRowCellDidLoadBlock)creatingBlock
-                                  action:(nonnull DynamicRowSelectedBlock)selectedBlock;
+                             cellDidLoad:(nonnull DynamicRowCellDidLoadBlock)cellDidLoadBlock
+                                  action:(nullable DynamicRowSelectedBlock)selectedBlock;
 
 + (nonnull instancetype)createRowWithXIB:(nonnull NSString *)xibName
-                                  action:(nonnull DynamicRowSelectedBlock)selectedBlock;
+                                  action:(nullable DynamicRowSelectedBlock)selectedBlock;
 
 
 // Create cell from Storyboard Table Cell
