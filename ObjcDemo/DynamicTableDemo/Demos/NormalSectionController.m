@@ -25,21 +25,10 @@
     [super viewDidLoad];
     
     for (int i=0; i<20; i++) {
-        [self.tableView.form addRow:[SingleLineRowModel createWithText:@"test"]];
-        
-//        [self.tableView.form addRow:[DynamicRowModel createRowWithSBIdentifier:@"CellWithLabels" creation:^(DynamicRowModel * _Nonnull rowModel, UITableViewCell * _Nonnull cell, DynamicTableView * _Nonnull tableView, UIViewController * _Nonnull controller) {
-//
-//            UILabel *label1 = [cell.contentView viewWithTag:1];
-//            if (label1 && [label1 isKindOfClass:[UILabel class]]) {
-//                [label1 setText:@"- Cell from storyboard with raw row model"];
-//            }
-//
-//            [(UILabel *)[cell.contentView viewWithTag:2] setText:[NSString stringWithFormat:@"# %ld", (long)rowModel.pathIndex.row]];
-//        } action:^(DynamicRowModel * _Nonnull rowModel, UITableViewCell * _Nonnull cell, DynamicTableView * _Nonnull tableView, UIViewController * _Nonnull controller) {
-//
-//            NSLog(@"On click model at %ld", (long)rowModel.pathIndex.row);
-//
-//        }]];
+        [self.tableView.form addRow:[SingleLineRowModel createWithText:[@"first - " stringByAppendingFormat:@"%d",i]]];
+    }
+    for (int i=0; i<20; i++) {
+        [self.tableView.form addRow:[SingleLineRowModel createWithText:[@"second - " stringByAppendingFormat:@"%d",i]]];
     }
 }
 

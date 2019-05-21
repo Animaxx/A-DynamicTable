@@ -38,7 +38,6 @@
         } action:^(DynamicRowModel * _Nonnull rowModel, UITableViewCell * _Nonnull cell, DynamicTableView * _Nonnull tableView, UIViewController * _Nonnull controller) {
             
             NSLog(@"On click model at %ld", (long)rowModel.pathIndex.row);
-            
         }]];
     }
     
