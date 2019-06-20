@@ -41,30 +41,7 @@ typedef void (^DynamicHeaderSelected) (DynamicHeaderModel *headerModel, UIView *
 
 - (void)tapSectionHeader:(UITapGestureRecognizer *)sendor;
 
-#pragma mark - creation methods
-+ (instancetype)createHeaderWithBlock:(DynamicBeaderCreating)creationBlock;
 
-+ (instancetype)createHeaderWithBlock:(DynamicBeaderCreating)creationBlock action:(DynamicHeaderSelected)selectedAction;
-
-+ (instancetype)createRowWithXIB:(NSString *)xibName;
-
-+ (instancetype)createRowWithXIB:(NSString *)xibName
-                                         action:(DynamicHeaderSelected)selectedAction;
-
-+ (instancetype)createRowWithXIB:(NSString *)xibName
-                                  creationBlock:(DynamicHeaderCreatingWithPreheader)creationBlock
-                                         action:(DynamicHeaderSelected)selectedAction;
-
-+ (instancetype)createRowWithXIB:(NSString *)xibName
-                                       creation:(DynamicHeaderCreatingWithPreheader)creatingBlock;
-
-+ (instancetype)createRowWithXIB:(NSString *)xibName
-                                         bundle:(NSBundle *)bundle
-                                       creation:(DynamicHeaderCreatingWithPreheader)creatingBlock;
-
-+ (instancetype)createRowWithXIB:(NSString *)xibName
-                                         bundle:(NSBundle *)bundle
-                                       creation:(DynamicHeaderCreatingWithPreheader)creatingBlock
-                                         action:(DynamicHeaderSelected)selectedAction;
 
 @end
+

@@ -8,7 +8,11 @@
 
 #import "SingleLineHeaderModel.h"
 
-@implementation SingleLineHeaderModel
+@implementation SingleLineHeaderModel {
+    NSString *_titleText;
+    UIColor *_titleColor;
+    UIColor *_backgroundColor;
+}
 
 - (instancetype)init
 {
@@ -19,9 +23,31 @@
     }
     return self;
 }
+
 - (void)headerDidCreated:(UIView *)header {
-    
+    UILabel *label = [header viewWithTag:1];
+    [label setText:self->_titleText];
+    if (self->_titleColor) {
+        [label setTextColor:self->_titleColor];
+    }
+    if (self->_backgroundColor) {
+        [header setBackgroundColor:self->_backgroundColor];
+    }
 }
+
++ (instancetype)createWithText:(NSString *)text {
+    SingleLineHeaderModel *model = [[SingleLineHeaderModel alloc] init];
+    model->_titleText = text;
+    return model;
+}
++ (instancetype)createWithText:(NSString *)text titleColor:(UIColor *)titleColor backgoundColor:(UIColor *)backgoundColor {
+    SingleLineHeaderModel *model = [[SingleLineHeaderModel alloc] init];
+    model->_titleText = text;
+    model->_titleColor = titleColor;
+    model->_backgroundColor = backgoundColor;
+    return model;
+}
+
 
 
 @end

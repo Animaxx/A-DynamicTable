@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SingleLineHeaderModel : DynamicHeaderModel
 
++ (instancetype)createWithText:(NSString *)text;
++ (instancetype)createWithText:(NSString *)text titleColor:(UIColor *)titleColor backgoundColor:(UIColor *)backgoundColor;
+
 @end
 
 NS_ASSUME_NONNULL_END

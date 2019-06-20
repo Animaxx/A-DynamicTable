@@ -195,6 +195,7 @@
     } else {
         [self.headerModels setObject:section forKey:key];
         [self.rowModelGroups setObject:[[NSMutableArray alloc] init] forKey:key];
+        [self.sectionKeys addObject:key];
         
         if ([section isKindOfClass:[DynamicSectionGroupHeader class]]) {
             self.isGroupSectionTable = YES;

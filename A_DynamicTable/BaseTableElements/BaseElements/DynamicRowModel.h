@@ -81,42 +81,5 @@ typedef UITableViewCell *_Nonnull(^DynamicRowCellCreateBlock) (DynamicRowModel *
 
 @property (nullable, nonatomic, strong) NSIndexPath *pathIndex;
 
-#pragma mark - creation methods
-// Create cell from code
-+ (nonnull instancetype)createRowWithBlock:(nonnull DynamicRowCellCreateBlock)creationBlock
-                                    action:(nonnull DynamicRowSelectedBlock)selectedBlock;
-
-// Create cell from XIB
-+ (nonnull instancetype)createRowWithXIB:(nonnull NSString *)xibName;
-
-+ (nonnull instancetype)createRowWithXIB:(nonnull NSString *)xibName
-                                  bundle:(nonnull NSBundle *)bundle;
-
-+ (nonnull instancetype)createRowWithXIB:(nonnull NSString *)xibName
-                                  bundle:(nonnull NSBundle *)bundle
-                                  action:(nullable DynamicRowSelectedBlock)selectedBlock;
-
-+ (nonnull instancetype)createRowWithXIB:(nonnull NSString *)xibName
-                                  bundle:(nonnull NSBundle *)bundle
-                             cellDidLoad:(nonnull DynamicRowCellDidLoadBlock)cellDidLoadBlock
-                                  action:(nullable DynamicRowSelectedBlock)selectedBlock;
-
-+ (nonnull instancetype)createRowWithXIB:(nonnull NSString *)xibName
-                             cellDidLoad:(nonnull DynamicRowCellDidLoadBlock)cellDidLoadBlock
-                                  action:(nullable DynamicRowSelectedBlock)selectedBlock;
-
-+ (nonnull instancetype)createRowWithXIB:(nonnull NSString *)xibName
-                                  action:(nullable DynamicRowSelectedBlock)selectedBlock;
-
-
-// Create cell from Storyboard Table Cell
-+ (nonnull instancetype)createRowWithSBIdentifier:(nonnull NSString *)Identifier;
-
-+ (nonnull instancetype)createRowWithSBIdentifier:(nonnull NSString *)Identifier
-                                         creation:(nonnull DynamicRowCellDidLoadBlock)creatingBlock
-                                           action:(nonnull DynamicRowSelectedBlock)selectedBlock;
-
-+ (nonnull instancetype)createRowWithSBIdentifier:(nonnull NSString *)Identifier
-                                           action:(nonnull DynamicRowSelectedBlock)selectedBlock;
 
 @end

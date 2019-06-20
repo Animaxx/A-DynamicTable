@@ -27,6 +27,10 @@
 		A9739FC62259530500C7992E /* SingleLineHeaderModel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9739FC52259530500C7992E /* SingleLineHeaderModel.xib */; };
 		A9739FCE22595D3F00C7992E /* SingleLineRowModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9739FCC22595D3F00C7992E /* SingleLineRowModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9739FCF22595D3F00C7992E /* SingleLineRowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9739FCD22595D3F00C7992E /* SingleLineRowModel.m */; };
+		A98B49DC22B97AFF003FE2D9 /* DynamicHeaderModel+Creation.h in Headers */ = {isa = PBXBuildFile; fileRef = A98B49DA22B97AFF003FE2D9 /* DynamicHeaderModel+Creation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A98B49DD22B97AFF003FE2D9 /* DynamicHeaderModel+Creation.m in Sources */ = {isa = PBXBuildFile; fileRef = A98B49DB22B97AFF003FE2D9 /* DynamicHeaderModel+Creation.m */; };
+		A98B49E022B97CD4003FE2D9 /* DynamicRowModel+Creation.h in Headers */ = {isa = PBXBuildFile; fileRef = A98B49DE22B97CD4003FE2D9 /* DynamicRowModel+Creation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A98B49E122B97CD4003FE2D9 /* DynamicRowModel+Creation.m in Sources */ = {isa = PBXBuildFile; fileRef = A98B49DF22B97CD4003FE2D9 /* DynamicRowModel+Creation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,11 @@
 		A9739FC52259530500C7992E /* SingleLineHeaderModel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleLineHeaderModel.xib; sourceTree = "<group>"; };
 		A9739FCC22595D3F00C7992E /* SingleLineRowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleLineRowModel.h; sourceTree = "<group>"; };
 		A9739FCD22595D3F00C7992E /* SingleLineRowModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleLineRowModel.m; sourceTree = "<group>"; };
+		A98B49DA22B97AFF003FE2D9 /* DynamicHeaderModel+Creation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DynamicHeaderModel+Creation.h"; sourceTree = "<group>"; };
+		A98B49DB22B97AFF003FE2D9 /* DynamicHeaderModel+Creation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DynamicHeaderModel+Creation.m"; sourceTree = "<group>"; };
+		A98B49DE22B97CD4003FE2D9 /* DynamicRowModel+Creation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DynamicRowModel+Creation.h"; sourceTree = "<group>"; };
+		A98B49DF22B97CD4003FE2D9 /* DynamicRowModel+Creation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DynamicRowModel+Creation.m"; sourceTree = "<group>"; };
+		A98B49E222BAA5E7003FE2D9 /* CollapsibleSectionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollapsibleSectionProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +117,12 @@
 			children = (
 				A9718F95225698AE002C07AD /* DynamicHeaderModel.h */,
 				A9718F93225698AE002C07AD /* DynamicHeaderModel.m */,
+				A98B49DA22B97AFF003FE2D9 /* DynamicHeaderModel+Creation.h */,
+				A98B49DB22B97AFF003FE2D9 /* DynamicHeaderModel+Creation.m */,
 				A9718F96225698AE002C07AD /* DynamicRowModel.h */,
 				A9718F94225698AE002C07AD /* DynamicRowModel.m */,
+				A98B49DE22B97CD4003FE2D9 /* DynamicRowModel+Creation.h */,
+				A98B49DF22B97CD4003FE2D9 /* DynamicRowModel+Creation.m */,
 			);
 			path = BaseElements;
 			sourceTree = "<group>";
@@ -141,6 +154,7 @@
 		A9718FB02256A95D002C07AD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A98B49E222BAA5E7003FE2D9 /* CollapsibleSectionProtocol.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -188,6 +202,8 @@
 				A957D76822564A1F0088C37B /* A_DynamicTable.h in Headers */,
 				A9739FBF2259514600C7992E /* SingleLineHeaderModel.h in Headers */,
 				A9739FCE22595D3F00C7992E /* SingleLineRowModel.h in Headers */,
+				A98B49E022B97CD4003FE2D9 /* DynamicRowModel+Creation.h in Headers */,
+				A98B49DC22B97AFF003FE2D9 /* DynamicHeaderModel+Creation.h in Headers */,
 				A9718FA5225698AE002C07AD /* DynamicRowModel.h in Headers */,
 				A9718FA6225698AE002C07AD /* DynamicEmptyHeader.h in Headers */,
 			);
@@ -262,12 +278,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9718FAA225698AE002C07AD /* DynamicEmptyHeader.m in Sources */,
+				A98B49DD22B97AFF003FE2D9 /* DynamicHeaderModel+Creation.m in Sources */,
 				A9718FA1225698AE002C07AD /* DynamicForm.m in Sources */,
 				A9718FA2225698AE002C07AD /* DynamicHeaderModel.m in Sources */,
 				A9718FAE225698AE002C07AD /* DynamicTableView.m in Sources */,
 				A9718FA8225698AE002C07AD /* CollapsibleHeader.m in Sources */,
 				A9718FA7225698AE002C07AD /* DynamicSectionGroupHeader.m in Sources */,
 				A9739FCF22595D3F00C7992E /* SingleLineRowModel.m in Sources */,
+				A98B49E122B97CD4003FE2D9 /* DynamicRowModel+Creation.m in Sources */,
 				A9739FC02259514600C7992E /* SingleLineHeaderModel.m in Sources */,
 				A9718FA3225698AE002C07AD /* DynamicRowModel.m in Sources */,
 			);

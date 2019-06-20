@@ -40,13 +40,12 @@
                     bundle = [NSBundle mainBundle];
                 }
                 
-                id owner = controller;
-                if (!owner) {
-                    owner = self;
-                }
-                
                 // load xib cell from bundle
-                // cell = [[bundle loadNibNamed:self.xibName owner:owner options:nil] firstObject];
+//                id owner = controller;
+//                if (!owner) {
+//                    owner = self;
+//                }
+//                cell = [[bundle loadNibNamed:self.xibName owner:owner options:nil] firstObject];
                 
                 UINib *cellNib = [UINib nibWithNibName:self.xibName bundle:bundle];
                 
@@ -106,101 +105,6 @@
 }
 - (UITableViewCell *) onCreateDynamicRowCell {
     return nil;
-}
-
-+ (instancetype)createRowWithBlock:(DynamicRowCellCreateBlock)creationBlock action:(DynamicRowSelectedBlock)selectedBlock {
-    DynamicRowModel *model = [[[self class] alloc] init];
-    [model setCellCreateBlock:creationBlock];
-    [model setCellSelectedBlock:selectedBlock];
-    
-    return model;
-}
-
-+ (instancetype)createRowWithXIB:(NSString *)xibName {
-    DynamicRowModel *model = [[[self class] alloc] init];
-    [model setXibName:xibName];
-    
-    return model;
-}
-
-+ (instancetype)createRowWithXIB:(NSString *)xibName
-                          bundle:(NSBundle *)bundle {
-    DynamicRowModel *model = [[[self class] alloc] init];
-    [model setXibName:xibName];
-    [model setCellBundle:bundle];
-    
-    return model;
-}
-
-+ (instancetype)createRowWithXIB:(NSString *)xibName
-                          bundle:(NSBundle *)bundle
-                          action:(DynamicRowSelectedBlock)selectedBlock {
-    DynamicRowModel *model = [[[self class] alloc] init];
-    [model setCellBundle:bundle];
-    [model setXibName:xibName];
-    [model setCellSelectedBlock:selectedBlock];
-    
-    return model;
-}
-
-+ (instancetype)createRowWithXIB:(NSString *)xibName
-                          bundle:(NSBundle *)bundle
-                     cellDidLoad:(DynamicRowCellDidLoadBlock)cellDidLoadBlock
-                          action:(DynamicRowSelectedBlock)selectedBlock {
-    DynamicRowModel *model = [[[self class] alloc] init];
-    [model setCellBundle:bundle];
-    [model setXibName:xibName];
-    [model setCellDidLoadBlock:cellDidLoadBlock];
-    [model setCellSelectedBlock:selectedBlock];
-    
-    return model;
-}
-
-+ (instancetype)createRowWithXIB:(NSString *)xibName
-                     cellDidLoad:(DynamicRowCellDidLoadBlock)cellDidLoadBlock
-                          action:(DynamicRowSelectedBlock)selectedBlock {
-    DynamicRowModel *model = [[[self class] alloc] init];
-    [model setXibName:xibName];
-    [model setCellDidLoadBlock:cellDidLoadBlock];
-    [model setCellSelectedBlock:selectedBlock];
-    
-    return model;
-}
-
-+ (instancetype)createRowWithXIB:(NSString *)xibName
-                          action:(DynamicRowSelectedBlock)selectedBlock {
-    DynamicRowModel *model = [[[self class] alloc] init];
-    [model setXibName:xibName];
-    [model setCellSelectedBlock:selectedBlock];
-    
-    return model;
-}
-
-+ (instancetype)createRowWithSBIdentifier:(NSString *)Identifier {
-    DynamicRowModel *model = [[[self class] alloc] init];
-    [model setSBIdentifier:Identifier];
-    
-    return model;
-}
-
-+ (instancetype)createRowWithSBIdentifier:(NSString *)Identifier
-                                 creation:(DynamicRowCellDidLoadBlock)creatingBlock
-                                   action:(DynamicRowSelectedBlock)selectedBlock {
-    DynamicRowModel *model = [[[self class] alloc] init];
-    [model setSBIdentifier:Identifier];
-    [model setCellDidLoadBlock: creatingBlock];
-    [model setCellSelectedBlock:selectedBlock];
-    
-    return model;
-}
-
-+ (instancetype)createRowWithSBIdentifier:(NSString *)Identifier
-                                   action:(DynamicRowSelectedBlock)selectedBlock {
-    DynamicRowModel *model = [[[self class] alloc] init];
-    [model setSBIdentifier:Identifier];
-    [model setCellSelectedBlock:selectedBlock];
-    
-    return model;
 }
 
 @end
