@@ -6,8 +6,8 @@
 //  Copyright © 2019 Animax. All rights reserved.
 //
 
-#import "StoryboardCellController.h"
 #import <A_DynamicTable/A_DynamicTable.h>
+#import "StoryboardCellController.h"
 #import "StoryboardCustomCell.h"
 
 @interface StoryboardCellController ()
@@ -27,7 +27,8 @@
     
     // Add cells from storyboard with raw row model
     for (int i=0; i<20; i++) {
-        [self.tableView.form addRow:[DynamicRowModel createRowWithSBIdentifier:@"CellWithLabels" creation:^(DynamicRowModel * _Nonnull rowModel, UITableViewCell * _Nonnull cell, DynamicTableView * _Nonnull tableView, UIViewController * _Nonnull controller) {
+        
+        [self.tableView.form addRow:[DynamicRowModel dynamicRowWithSBIdentifier:@"CellWithLabels" creation:^(DynamicRowModel * _Nonnull rowModel, UITableViewCell * _Nonnull cell, DynamicTableView * _Nonnull tableView, UIViewController * _Nonnull controller) {
             
             UILabel *label1 = [cell.contentView viewWithTag:1];
             if (label1 && [label1 isKindOfClass:[UILabel class]]) {

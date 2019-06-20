@@ -1,21 +1,21 @@
 //
-//  NormalSectionController.m
+//  CollapsibleSectionController.m
 //  DynamicTableDemo
 //
-//  Created by Animax Deng on 4/29/19.
+//  Created by Animax Deng on 6/19/19.
 //  Copyright © 2019 Animax. All rights reserved.
 //
 
-#import "NormalSectionController.h"
+#import "CollapsibleSectionController.h"
 #import <A_DynamicTable/A_DynamicTable.h>
 
-@interface NormalSectionController ()
+@interface CollapsibleSectionController ()
 
 @property (weak, nonatomic) IBOutlet DynamicTableView *tableView;
 
 @end
 
-@implementation NormalSectionController
+@implementation CollapsibleSectionController
 
 - (NSString *)title {
     return @"Normal Section Usage Demo";

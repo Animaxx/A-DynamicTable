@@ -18,6 +18,7 @@
 		A9739FC8225956DC00C7992E /* A_DynamicTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9739FC7225956DC00C7992E /* A_DynamicTable.framework */; };
 		A9739FC9225956DC00C7992E /* A_DynamicTable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9739FC7225956DC00C7992E /* A_DynamicTable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A97BEE35226432EF00A03EE5 /* StoryboardCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97BEE34226432EF00A03EE5 /* StoryboardCellController.m */; };
+		A98B49E522BAA835003FE2D9 /* CollapsibleSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A98B49E422BAA835003FE2D9 /* CollapsibleSectionController.m */; };
 		A9A31EEB2290D33000F13DD4 /* XIBellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A31EEA2290D33000F13DD4 /* XIBellViewController.m */; };
 		A9A31EEE22910CF900F13DD4 /* CustomXIBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A31EED22910CF900F13DD4 /* CustomXIBCell.xib */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,8 @@
 		A9739FC7225956DC00C7992E /* A_DynamicTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = A_DynamicTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97BEE33226432EF00A03EE5 /* StoryboardCellController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryboardCellController.h; sourceTree = "<group>"; };
 		A97BEE34226432EF00A03EE5 /* StoryboardCellController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryboardCellController.m; sourceTree = "<group>"; };
+		A98B49E322BAA835003FE2D9 /* CollapsibleSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollapsibleSectionController.h; sourceTree = "<group>"; };
+		A98B49E422BAA835003FE2D9 /* CollapsibleSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollapsibleSectionController.m; sourceTree = "<group>"; };
 		A9A31EE92290D33000F13DD4 /* XIBCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XIBCellViewController.h; sourceTree = "<group>"; };
 		A9A31EEA2290D33000F13DD4 /* XIBellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XIBellViewController.m; sourceTree = "<group>"; };
 		A9A31EED22910CF900F13DD4 /* CustomXIBCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomXIBCell.xib; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 				A90762062277A050002E9418 /* NormalSectionController.m */,
 				A9A31EE92290D33000F13DD4 /* XIBCellViewController.h */,
 				A9A31EEA2290D33000F13DD4 /* XIBellViewController.m */,
+				A98B49E322BAA835003FE2D9 /* CollapsibleSectionController.h */,
+				A98B49E422BAA835003FE2D9 /* CollapsibleSectionController.m */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				A9A31EEB2290D33000F13DD4 /* XIBellViewController.m in Sources */,
 				A907620422778C65002E9418 /* StoryboardCustomCell.m in Sources */,
 				A90762072277A050002E9418 /* NormalSectionController.m in Sources */,
+				A98B49E522BAA835003FE2D9 /* CollapsibleSectionController.m in Sources */,
 				A9739FB12258387700C7992E /* main.m in Sources */,
 				A9739FA32258387500C7992E /* AppDelegate.m in Sources */,
 				A97BEE35226432EF00A03EE5 /* StoryboardCellController.m in Sources */,

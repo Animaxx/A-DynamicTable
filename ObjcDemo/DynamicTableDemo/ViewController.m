@@ -26,7 +26,7 @@
                           };
     
     for (NSString *k in dic) {
-        DynamicRowModel *row = [DynamicRowModel createRowWithSBIdentifier:@"cell"];
+        DynamicRowModel *row = [DynamicRowModel dynamicRowWithSBIdentifier:@"cell"];
         [row setCellDidLoadBlock:^(DynamicRowModel * _Nonnull rowModel, UITableViewCell * _Nonnull cell, DynamicTableView * _Nonnull tableView, UIViewController * _Nonnull controller) {
             [cell.textLabel setText:k];
             [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];

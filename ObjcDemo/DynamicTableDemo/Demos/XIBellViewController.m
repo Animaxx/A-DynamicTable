@@ -24,7 +24,7 @@
     [super viewDidLoad];
     
     for (int i=0; i<20; i++) {
-        [self.tableView.form addRow: [DynamicRowModel createRowWithXIB:@"CustomXIBCell" bundle:[NSBundle mainBundle] cellDidLoad:^(DynamicRowModel * _Nonnull rowModel, UITableViewCell * _Nonnull cell, DynamicTableView * _Nonnull tableView, UIViewController * _Nonnull controller) {
+        [self.tableView.form addRow: [DynamicRowModel dynamicRowWithXIB:@"CustomXIBCell" bundle:[NSBundle mainBundle] cellDidLoad:^(DynamicRowModel * _Nonnull rowModel, UITableViewCell * _Nonnull cell, DynamicTableView * _Nonnull tableView, UIViewController * _Nonnull controller) {
             
             UILabel *firstLabel = [cell.contentView viewWithTag:1];
             UILabel *secondLabel = [cell.contentView viewWithTag:2];
