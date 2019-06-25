@@ -6,9 +6,9 @@
 //  Copyright © 2019 Animax. All rights reserved.
 //
 
-#import "SingleLineRowModel.h"
+#import "SingleLineRow.h"
 
-@implementation SingleLineRowModel {
+@implementation SingleLineRow {
     NSString *lineText;
 }
 
@@ -21,8 +21,8 @@
     return self;
 }
 
-+ (SingleLineRowModel *)createWithText:(NSString *)text {
-    SingleLineRowModel *row = [[SingleLineRowModel alloc] init];
++ (SingleLineRow *)createWithText:(NSString *)text {
+    SingleLineRow *row = [[SingleLineRow alloc] init];
     row->lineText = text;
     return row;
 }

@@ -6,9 +6,9 @@
 //  Copyright © 2019 Animax. All rights reserved.
 //
 
-#import "SingleLineHeaderModel.h"
+#import "SingleLineHeader.h"
 
-@implementation SingleLineHeaderModel {
+@implementation SingleLineHeader {
     NSString *_titleText;
     UIColor *_titleColor;
     UIColor *_backgroundColor;
@@ -19,7 +19,7 @@
     self = [super init];
     if (self) {
         [super setHeaderBundle:[NSBundle bundleForClass:[self class]]];
-        [super setXibName:@"SingleLineHeaderModel"];
+        [super setXibName:@"SingleLineHeader"];
     }
     return self;
 }
@@ -36,12 +36,12 @@
 }
 
 + (instancetype)createWithText:(NSString *)text {
-    SingleLineHeaderModel *model = [[SingleLineHeaderModel alloc] init];
+    SingleLineHeader *model = [[SingleLineHeader alloc] init];
     model->_titleText = text;
     return model;
 }
 + (instancetype)createWithText:(NSString *)text titleColor:(UIColor *)titleColor backgoundColor:(UIColor *)backgoundColor {
-    SingleLineHeaderModel *model = [[SingleLineHeaderModel alloc] init];
+    SingleLineHeader *model = [[SingleLineHeader alloc] init];
     model->_titleText = text;
     model->_titleColor = titleColor;
     model->_backgroundColor = backgoundColor;

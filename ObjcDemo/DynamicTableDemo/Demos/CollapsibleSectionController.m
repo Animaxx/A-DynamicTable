@@ -24,18 +24,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView.form addSection:[SingleLineHeaderModel createWithText:@"First Header"
-                                                               titleColor:[UIColor blackColor]
-                                                           backgoundColor:[UIColor lightGrayColor]]];
+    [self.tableView.form addSection:[SingleLineCollapsibleHeader createWithText:@"First Header" titleColor:[UIColor blackColor] backgoundColor:[UIColor lightGrayColor]]];
+    
     for (int i=0; i<20; i++) {
-        [self.tableView.form addRow:[SingleLineRowModel createWithText:[@"first - " stringByAppendingFormat:@"%d",i]]];
+        [self.tableView.form addRow:[SingleLineRow createWithText:[@"first - " stringByAppendingFormat:@"%d",i]]];
     }
     
-    [self.tableView.form addSection:[SingleLineHeaderModel createWithText:@"Second Header"
-                                                               titleColor:[UIColor blackColor]
-                                                           backgoundColor:[UIColor lightGrayColor]]];
+    [self.tableView.form addSection:[SingleLineCollapsibleHeader createWithText:@"Second Header" titleColor:[UIColor blackColor] backgoundColor:[UIColor lightGrayColor]]];
+    
     for (int i=0; i<20; i++) {
-        [self.tableView.form addRow:[SingleLineRowModel createWithText:[@"second - " stringByAppendingFormat:@"%d",i]]];
+        [self.tableView.form addRow:[SingleLineRow createWithText:[@"second - " stringByAppendingFormat:@"%d",i]]];
     }
 }
 

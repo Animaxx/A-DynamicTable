@@ -7,7 +7,7 @@
 //
 
 #import "DynamicTableView.h"
-#import "CollapsibleHeader.h"
+#import "CollapsibleSectionProtocol.h"
 #import "DynamicSectionGroupHeader.h"
 
 @interface DynamicHeaderModel()
@@ -100,7 +100,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     DynamicHeaderModel *header = [self.form getHeaderAtIndex:section];
-    if ([header isKindOfClass:[CollapsibleHeader class]] && ((CollapsibleHeader *)header).isCollapsed) {
+    
+    if (header && [[header class] conformsToProtocol:@protocol(CollapsibleHeader)] && [(id<CollapsibleHeader>)header isCollapsed]) {
         return 0;
     } else {
         return [[self.form rowsAtIndex:section] count];

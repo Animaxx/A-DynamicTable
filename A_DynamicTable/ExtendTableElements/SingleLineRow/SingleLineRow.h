@@ -11,9 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SingleLineRowModel : DynamicRowModel
+@interface SingleLineRow : DynamicRowModel
 
-+ (SingleLineRowModel *)createWithText:(NSString *)text;
++ (SingleLineRow *)createWithText:(NSString *)text;
 
 @end
 

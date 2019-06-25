@@ -22,7 +22,8 @@
     [super viewDidLoad];
     NSDictionary *dic = @{@"Demo create from storyboard": @"StoryboardCellController",
                           @"Demo normal sections": @"NormalSectionController",
-                          @"Demo XIB sections": @"XIBCellViewController"
+                          @"Demo XIB sections": @"XIBCellViewController",
+                          @"Demo Collapsible sections": @"CollapsibleSectionController"
                           };
     
     for (NSString *k in dic) {
