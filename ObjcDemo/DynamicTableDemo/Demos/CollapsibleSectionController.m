@@ -26,13 +26,13 @@
     
     [self.tableView.form addSection:[SingleLineCollapsibleHeader createWithText:@"First Header" titleColor:[UIColor blackColor] backgoundColor:[UIColor lightGrayColor]]];
     
-    for (int i=0; i<20; i++) {
+    for (int i=0; i<10; i++) {
         [self.tableView.form addRow:[SingleLineRow createWithText:[@"first - " stringByAppendingFormat:@"%d",i]]];
     }
     
     [self.tableView.form addSection:[SingleLineCollapsibleHeader createWithText:@"Second Header" titleColor:[UIColor blackColor] backgoundColor:[UIColor lightGrayColor]]];
     
-    for (int i=0; i<20; i++) {
+    for (int i=0; i<10; i++) {
         [self.tableView.form addRow:[SingleLineRow createWithText:[@"second - " stringByAppendingFormat:@"%d",i]]];
     }
 }

@@ -6,11 +6,14 @@
 //  Copyright © 2019 Animax. All rights reserved.
 //
 
-/// To enable collapsible capability for header
+/*
+ To indicate the header has collapsible capability
+ */
 @protocol CollapsibleHeader
 
 @required
-/// Record if the section is collapsed
+
+/// Indicate the section state is now collapsed
 @property (nonatomic) BOOL isCollapsed;
 
 @end

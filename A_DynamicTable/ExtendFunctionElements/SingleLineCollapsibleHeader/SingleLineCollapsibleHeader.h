@@ -8,11 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "DynamicHeaderModel.h"
-#import "CollapsibleSectionProtocol.h"
+#import "BasicCollapsibleHeader.h"
 
-@interface SingleLineCollapsibleHeader : DynamicHeaderModel <CollapsibleHeader>
-
-@property (nonatomic, assign) BOOL isCollapsed;
+@interface SingleLineCollapsibleHeader : BasicCollapsibleHeader
 
 + (instancetype)createWithText:(NSString *)text;
 + (instancetype)createWithText:(NSString *)text titleColor:(UIColor *)titleColor backgoundColor:(UIColor *)backgoundColor;

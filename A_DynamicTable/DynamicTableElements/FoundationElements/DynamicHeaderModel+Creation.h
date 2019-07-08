@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/*
+ Extanded Creation functions for header models
+ */
 @interface DynamicHeaderModel (Creation)
 
 + (instancetype)dynamicHeaderWithBlock:(DynamicBeaderCreating)creationBlock;

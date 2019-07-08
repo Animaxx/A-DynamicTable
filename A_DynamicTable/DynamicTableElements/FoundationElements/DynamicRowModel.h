@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+/*
+ Foundatetion Row, all row(cell) model in dynamic table should inherit from this.
+ */
 @class DynamicRowModel, DynamicTableView;
 
 typedef void (^DynamicRowSelectedBlock) (DynamicRowModel *_Nonnull rowModel, UITableViewCell *_Nonnull cell, DynamicTableView *_Nonnull tableView, UIViewController *_Nonnull controller);

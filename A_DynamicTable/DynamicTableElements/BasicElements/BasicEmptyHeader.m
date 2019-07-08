@@ -1,14 +1,14 @@
 //
-//  DynamicEmptyHeader.m
+//  BasicEmptyHeader.h
 //  A_DynamicTable
 //
 //  Created by Animax Deng on 2/12/19.
 //  Copyright © 2019 Animax. All rights reserved.
 //
 
-#import "DynamicEmptyHeader.h"
+#import "BasicEmptyHeader.h"
 
-@implementation DynamicEmptyHeader
+@implementation BasicEmptyHeader
 
 - (CGFloat)dynamicHeaderHeight {
     return 0.0;
@@ -17,7 +17,7 @@
     return [[UIView alloc] init];
 }
 + (instancetype)create {
-    return [[DynamicEmptyHeader alloc] init];
+    return [[BasicEmptyHeader alloc] init];
 }
 
 @end

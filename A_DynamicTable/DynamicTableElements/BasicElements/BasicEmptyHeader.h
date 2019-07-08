@@ -1,5 +1,5 @@
 //
-//  DynamicEmptyHeader.h
+//  BasicEmptyHeader.h
 //  A_DynamicTable
 //
 //  Created by Animax Deng on 2/12/19.
@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "DynamicHeaderModel.h"
 
-@interface DynamicEmptyHeader : DynamicHeaderModel
+/*
+ Empty header with 0 height, default header for dynamic tableview
+ */
+@interface BasicEmptyHeader : DynamicHeaderModel
 
 + (instancetype)create;
 

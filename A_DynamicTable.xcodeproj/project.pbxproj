@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A90525B122D2BED8008F056D /* BasicCollapsibleHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = A90525AF22D2BED8008F056D /* BasicCollapsibleHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A90525B222D2BED8008F056D /* BasicCollapsibleHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A90525B022D2BED8008F056D /* BasicCollapsibleHeader.m */; };
 		A926675622C1DCBC00BE1141 /* CollapsibleSectionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = A98B49E222BAA5E7003FE2D9 /* CollapsibleSectionProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A957D76822564A1F0088C37B /* A_DynamicTable.h in Headers */ = {isa = PBXBuildFile; fileRef = A957D76622564A1F0088C37B /* A_DynamicTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9718FA1225698AE002C07AD /* DynamicForm.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F90225698AE002C07AD /* DynamicForm.m */; };
@@ -14,11 +16,11 @@
 		A9718FA3225698AE002C07AD /* DynamicRowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F94225698AE002C07AD /* DynamicRowModel.m */; };
 		A9718FA4225698AE002C07AD /* DynamicHeaderModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F95225698AE002C07AD /* DynamicHeaderModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9718FA5225698AE002C07AD /* DynamicRowModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F96225698AE002C07AD /* DynamicRowModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9718FA6225698AE002C07AD /* DynamicEmptyHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F98225698AE002C07AD /* DynamicEmptyHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9718FA6225698AE002C07AD /* BasicEmptyHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F98225698AE002C07AD /* BasicEmptyHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9718FA7225698AE002C07AD /* DynamicSectionGroupHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F99225698AE002C07AD /* DynamicSectionGroupHeader.m */; };
 		A9718FA8225698AE002C07AD /* SingleLineCollapsibleHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F9A225698AE002C07AD /* SingleLineCollapsibleHeader.m */; };
 		A9718FA9225698AE002C07AD /* DynamicSectionGroupHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F9B225698AE002C07AD /* DynamicSectionGroupHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9718FAA225698AE002C07AD /* DynamicEmptyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F9C225698AE002C07AD /* DynamicEmptyHeader.m */; };
+		A9718FAA225698AE002C07AD /* BasicEmptyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9718F9C225698AE002C07AD /* BasicEmptyHeader.m */; };
 		A9718FAB225698AE002C07AD /* SingleLineCollapsibleHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F9D225698AE002C07AD /* SingleLineCollapsibleHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9718FAC225698AE002C07AD /* DynamicTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F9E225698AE002C07AD /* DynamicTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9718FAD225698AE002C07AD /* DynamicForm.h in Headers */ = {isa = PBXBuildFile; fileRef = A9718F9F225698AE002C07AD /* DynamicForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A90525AF22D2BED8008F056D /* BasicCollapsibleHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicCollapsibleHeader.h; sourceTree = "<group>"; };
+		A90525B022D2BED8008F056D /* BasicCollapsibleHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicCollapsibleHeader.m; sourceTree = "<group>"; };
 		A957D76322564A1F0088C37B /* A_DynamicTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = A_DynamicTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A957D76622564A1F0088C37B /* A_DynamicTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = A_DynamicTable.h; sourceTree = "<group>"; };
 		A957D76722564A1F0088C37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,11 +47,11 @@
 		A9718F94225698AE002C07AD /* DynamicRowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicRowModel.m; sourceTree = "<group>"; };
 		A9718F95225698AE002C07AD /* DynamicHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicHeaderModel.h; sourceTree = "<group>"; };
 		A9718F96225698AE002C07AD /* DynamicRowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicRowModel.h; sourceTree = "<group>"; };
-		A9718F98225698AE002C07AD /* DynamicEmptyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicEmptyHeader.h; sourceTree = "<group>"; };
+		A9718F98225698AE002C07AD /* BasicEmptyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicEmptyHeader.h; sourceTree = "<group>"; };
 		A9718F99225698AE002C07AD /* DynamicSectionGroupHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicSectionGroupHeader.m; sourceTree = "<group>"; };
 		A9718F9A225698AE002C07AD /* SingleLineCollapsibleHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleLineCollapsibleHeader.m; sourceTree = "<group>"; };
 		A9718F9B225698AE002C07AD /* DynamicSectionGroupHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicSectionGroupHeader.h; sourceTree = "<group>"; };
-		A9718F9C225698AE002C07AD /* DynamicEmptyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicEmptyHeader.m; sourceTree = "<group>"; };
+		A9718F9C225698AE002C07AD /* BasicEmptyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicEmptyHeader.m; sourceTree = "<group>"; };
 		A9718F9D225698AE002C07AD /* SingleLineCollapsibleHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleLineCollapsibleHeader.h; sourceTree = "<group>"; };
 		A9718F9E225698AE002C07AD /* DynamicTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicTableView.h; sourceTree = "<group>"; };
 		A9718F9F225698AE002C07AD /* DynamicForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicForm.h; sourceTree = "<group>"; };
@@ -105,24 +109,24 @@
 			children = (
 				A9718FB02256A95D002C07AD /* FunctionalProtocol */,
 				A9718FAF225698CB002C07AD /* DynamicTable */,
-				A9718F91225698AE002C07AD /* BaseTableElements */,
-				A9739FBA2259501200C7992E /* ExtendTableElements */,
+				A9718F91225698AE002C07AD /* DynamicTableElements */,
+				A9739FBA2259501200C7992E /* ExtendFunctionElements */,
 				A957D76622564A1F0088C37B /* A_DynamicTable.h */,
 				A957D76722564A1F0088C37B /* Info.plist */,
 			);
 			path = A_DynamicTable;
 			sourceTree = "<group>";
 		};
-		A9718F91225698AE002C07AD /* BaseTableElements */ = {
+		A9718F91225698AE002C07AD /* DynamicTableElements */ = {
 			isa = PBXGroup;
 			children = (
-				A9718F92225698AE002C07AD /* BaseElements */,
-				A9718F97225698AE002C07AD /* BaseFunctionHeaders */,
+				A9718F92225698AE002C07AD /* FoundationElements */,
+				A9718F97225698AE002C07AD /* BasicElements */,
 			);
-			path = BaseTableElements;
+			path = DynamicTableElements;
 			sourceTree = "<group>";
 		};
-		A9718F92225698AE002C07AD /* BaseElements */ = {
+		A9718F92225698AE002C07AD /* FoundationElements */ = {
 			isa = PBXGroup;
 			children = (
 				A9718F95225698AE002C07AD /* DynamicHeaderModel.h */,
@@ -134,18 +138,20 @@
 				A98B49DE22B97CD4003FE2D9 /* DynamicRowModel+Creation.h */,
 				A98B49DF22B97CD4003FE2D9 /* DynamicRowModel+Creation.m */,
 			);
-			path = BaseElements;
+			path = FoundationElements;
 			sourceTree = "<group>";
 		};
-		A9718F97225698AE002C07AD /* BaseFunctionHeaders */ = {
+		A9718F97225698AE002C07AD /* BasicElements */ = {
 			isa = PBXGroup;
 			children = (
-				A9718F98225698AE002C07AD /* DynamicEmptyHeader.h */,
-				A9718F9C225698AE002C07AD /* DynamicEmptyHeader.m */,
+				A9718F98225698AE002C07AD /* BasicEmptyHeader.h */,
+				A9718F9C225698AE002C07AD /* BasicEmptyHeader.m */,
+				A90525AF22D2BED8008F056D /* BasicCollapsibleHeader.h */,
+				A90525B022D2BED8008F056D /* BasicCollapsibleHeader.m */,
 				A9718F9B225698AE002C07AD /* DynamicSectionGroupHeader.h */,
 				A9718F99225698AE002C07AD /* DynamicSectionGroupHeader.m */,
 			);
-			path = BaseFunctionHeaders;
+			path = BasicElements;
 			sourceTree = "<group>";
 		};
 		A9718FAF225698CB002C07AD /* DynamicTable */ = {
@@ -167,14 +173,14 @@
 			path = FunctionalProtocol;
 			sourceTree = "<group>";
 		};
-		A9739FBA2259501200C7992E /* ExtendTableElements */ = {
+		A9739FBA2259501200C7992E /* ExtendFunctionElements */ = {
 			isa = PBXGroup;
 			children = (
 				A9739FCB22595D2300C7992E /* SingleLineRow */,
 				A9739FBC2259511A00C7992E /* SingleLineHeader */,
 				A926675722C1E0E900BE1141 /* SingleLineCollapsibleHeader */,
 			);
-			path = ExtendTableElements;
+			path = ExtendFunctionElements;
 			sourceTree = "<group>";
 		};
 		A9739FBC2259511A00C7992E /* SingleLineHeader */ = {
@@ -214,7 +220,8 @@
 				A98B49E022B97CD4003FE2D9 /* DynamicRowModel+Creation.h in Headers */,
 				A98B49DC22B97AFF003FE2D9 /* DynamicHeaderModel+Creation.h in Headers */,
 				A9718FA5225698AE002C07AD /* DynamicRowModel.h in Headers */,
-				A9718FA6225698AE002C07AD /* DynamicEmptyHeader.h in Headers */,
+				A9718FA6225698AE002C07AD /* BasicEmptyHeader.h in Headers */,
+				A90525B122D2BED8008F056D /* BasicCollapsibleHeader.h in Headers */,
 				A926675622C1DCBC00BE1141 /* CollapsibleSectionProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9718FAA225698AE002C07AD /* DynamicEmptyHeader.m in Sources */,
+				A90525B222D2BED8008F056D /* BasicCollapsibleHeader.m in Sources */,
+				A9718FAA225698AE002C07AD /* BasicEmptyHeader.m in Sources */,
 				A98B49DD22B97AFF003FE2D9 /* DynamicHeaderModel+Creation.m in Sources */,
 				A9718FA1225698AE002C07AD /* DynamicForm.m in Sources */,
 				A9718FA2225698AE002C07AD /* DynamicHeaderModel.m in Sources */,

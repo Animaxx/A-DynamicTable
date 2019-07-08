@@ -10,13 +10,10 @@
 #import "DynamicTableView.h"
 
 @implementation SingleLineCollapsibleHeader {
-    BOOL _isSectionCollapsed;
     NSString *_titleText;
     UIColor *_titleColor;
     UIColor *_backgroundColor;
 }
-
-@synthesize isCollapsed;
 
 - (instancetype)init
 {
@@ -26,22 +23,6 @@
         [super setXibName:@"SingleLineHeader"];
     }
     return self;
-}
-
-- (BOOL)isCollapsed {
-    return _isSectionCollapsed;
-}
-- (void)setIsCollapsed:(BOOL)value {
-    _isSectionCollapsed = value;
-}
-
-- (void)triggerCollapsed {
-    _isSectionCollapsed = !_isSectionCollapsed;
-}
-- (void)tapSectionHeader:(UITapGestureRecognizer *)sendor {
-    [self triggerCollapsed];
-    [super tapSectionHeader:sendor];
-    [self.parentTableView reloadSections:[[NSIndexSet alloc] initWithIndex:self.sectionIndex] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)headerDidCreated:(UIView *)header {

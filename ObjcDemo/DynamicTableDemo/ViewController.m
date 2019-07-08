@@ -20,13 +20,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSDictionary *dic = @{@"Demo create from storyboard": @"StoryboardCellController",
-                          @"Demo normal sections": @"NormalSectionController",
-                          @"Demo XIB sections": @"XIBCellViewController",
-                          @"Demo Collapsible sections": @"CollapsibleSectionController"
+    
+    NSArray *demoList = @[@"Demo create from storyboard",
+                          @"Demo normal sections",
+                          @"Demo XIB sections",
+                          @"Demo Collapsible sections"];
+    
+    NSDictionary *dic = @{demoList[0]: @"StoryboardCellController",
+                          demoList[1]: @"NormalSectionController",
+                          demoList[2]: @"XIBCellViewController",
+                          demoList[3]: @"CollapsibleSectionController"
                           };
     
-    for (NSString *k in dic) {
+    for (NSString *k in demoList) {
         DynamicRowModel *row = [DynamicRowModel dynamicRowWithSBIdentifier:@"cell"];
         [row setCellDidLoadBlock:^(DynamicRowModel * _Nonnull rowModel, UITableViewCell * _Nonnull cell, DynamicTableView * _Nonnull tableView, UIViewController * _Nonnull controller) {
             [cell.textLabel setText:k];

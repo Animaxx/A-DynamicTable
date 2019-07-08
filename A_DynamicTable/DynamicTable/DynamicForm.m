@@ -7,7 +7,7 @@
 //
 
 #import "DynamicForm.h"
-#import "DynamicEmptyHeader.h"
+#import "BasicEmptyHeader.h"
 #import "DynamicSectionGroupHeader.h"
 
 @interface DynamicHeaderModel()
@@ -163,7 +163,7 @@
 }
 - (DynamicForm *)addRow:(DynamicRowModel *)row {
     if (self.count == 0) {
-        DynamicEmptyHeader *header = [[DynamicEmptyHeader alloc] init];
+        BasicEmptyHeader *header = [[BasicEmptyHeader alloc] init];
         [self insertRowGroup:[@[row] mutableCopy] forHeader:header atIndex:0];
     } else {
         [((NSMutableArray<DynamicRowModel *> *)[self lastSectionOfRows]) addObject:row];

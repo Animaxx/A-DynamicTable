@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
+/*
+ Foundatetion Header, all headers in dynamic table should inherit from this.
+ */
 @class DynamicHeaderModel, DynamicTableView;
 
 typedef UIView *(^DynamicBeaderCreating) (DynamicHeaderModel *headerModel, DynamicTableView *tableView, UIViewController *controller);

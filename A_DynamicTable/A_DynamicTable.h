@@ -23,9 +23,8 @@ FOUNDATION_EXPORT const unsigned char A_DynamicTableVersionString[];
 #import "DynamicRowModel.h"
 #import "DynamicRowModel+Creation.h"
 
-#import "DynamicEmptyHeader.h"
+#import "BasicEmptyHeader.h"
 #import "DynamicSectionGroupHeader.h"
-#import "CollapsibleHeader.h"
 #import "DynamicEmptyHeader.h"
 
 #import "SingleLineRow.h"

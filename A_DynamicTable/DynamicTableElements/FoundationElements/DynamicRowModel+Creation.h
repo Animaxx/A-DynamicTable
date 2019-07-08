@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/*
+ Extanded Creation functions for row models
+ */
 @interface DynamicRowModel (Creation)
 
 #pragma mark - Create cell from code

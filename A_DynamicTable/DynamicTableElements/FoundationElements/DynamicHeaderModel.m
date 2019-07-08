@@ -74,8 +74,6 @@
 }
 
 - (void)tapSectionHeader:(UITapGestureRecognizer *)sendor {
-    NSLog(@"tapSectionHeader %@", sendor);
-    
     if (self.selectedBlock) {
         self.selectedBlock(self, self.headerView, self.parentTableView, self.parentController);
     }
