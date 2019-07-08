@@ -21,15 +21,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *demoList = @[@"Demo create from storyboard",
-                          @"Demo normal sections",
-                          @"Demo XIB sections",
-                          @"Demo Collapsible sections"];
+    NSArray *demoList = @[@"Demo create rows with storyboard",
+                          @"Demo create rows with built in model",
+                          @"Demo create rows with XIB",
+                          @"Demo collapsible header",
+                          @"Demo custom Collapsible header"];
     
     NSDictionary *dic = @{demoList[0]: @"StoryboardCellController",
                           demoList[1]: @"NormalSectionController",
                           demoList[2]: @"XIBCellViewController",
-                          demoList[3]: @"CollapsibleSectionController"
+                          demoList[3]: @"CollapsibleSectionController",
+                          demoList[4]: @"CustomCollapsibleSectionController"
                           };
     
     for (NSString *k in demoList) {

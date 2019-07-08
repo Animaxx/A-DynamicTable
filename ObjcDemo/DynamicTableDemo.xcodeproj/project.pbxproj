@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A90525B522D2D38E008F056D /* CustomCollapsibleSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90525B422D2D38E008F056D /* CustomCollapsibleSectionController.m */; };
+		A90525B722D2D92F008F056D /* CustomCollapsibleHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A90525B622D2D92F008F056D /* CustomCollapsibleHeader.xib */; };
+		A90525BB22D2DD60008F056D /* StoryboardCustomCollapsibleHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A90525BA22D2DD60008F056D /* StoryboardCustomCollapsibleHeader.m */; };
 		A907620422778C65002E9418 /* StoryboardCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A907620322778C65002E9418 /* StoryboardCustomCell.m */; };
 		A90762072277A050002E9418 /* NormalSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90762062277A050002E9418 /* NormalSectionController.m */; };
 		A9739FA32258387500C7992E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9739FA22258387500C7992E /* AppDelegate.m */; };
@@ -19,7 +22,7 @@
 		A9739FC9225956DC00C7992E /* A_DynamicTable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9739FC7225956DC00C7992E /* A_DynamicTable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A97BEE35226432EF00A03EE5 /* StoryboardCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97BEE34226432EF00A03EE5 /* StoryboardCellController.m */; };
 		A98B49E522BAA835003FE2D9 /* CollapsibleSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A98B49E422BAA835003FE2D9 /* CollapsibleSectionController.m */; };
-		A9A31EEB2290D33000F13DD4 /* XIBellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A31EEA2290D33000F13DD4 /* XIBellViewController.m */; };
+		A9A31EEB2290D33000F13DD4 /* XIBCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A31EEA2290D33000F13DD4 /* XIBCellViewController.m */; };
 		A9A31EEE22910CF900F13DD4 /* CustomXIBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A31EED22910CF900F13DD4 /* CustomXIBCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +41,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A90525B322D2D38E008F056D /* CustomCollapsibleSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCollapsibleSectionController.h; sourceTree = "<group>"; };
+		A90525B422D2D38E008F056D /* CustomCollapsibleSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCollapsibleSectionController.m; sourceTree = "<group>"; };
+		A90525B622D2D92F008F056D /* CustomCollapsibleHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollapsibleHeader.xib; sourceTree = "<group>"; };
+		A90525B922D2DD60008F056D /* StoryboardCustomCollapsibleHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryboardCustomCollapsibleHeader.h; sourceTree = "<group>"; };
+		A90525BA22D2DD60008F056D /* StoryboardCustomCollapsibleHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryboardCustomCollapsibleHeader.m; sourceTree = "<group>"; };
 		A907620222778C65002E9418 /* StoryboardCustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryboardCustomCell.h; sourceTree = "<group>"; };
 		A907620322778C65002E9418 /* StoryboardCustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryboardCustomCell.m; sourceTree = "<group>"; };
 		A90762052277A050002E9418 /* NormalSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalSectionController.h; sourceTree = "<group>"; };
@@ -58,7 +66,7 @@
 		A98B49E322BAA835003FE2D9 /* CollapsibleSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollapsibleSectionController.h; sourceTree = "<group>"; };
 		A98B49E422BAA835003FE2D9 /* CollapsibleSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollapsibleSectionController.m; sourceTree = "<group>"; };
 		A9A31EE92290D33000F13DD4 /* XIBCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XIBCellViewController.h; sourceTree = "<group>"; };
-		A9A31EEA2290D33000F13DD4 /* XIBellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XIBellViewController.m; sourceTree = "<group>"; };
+		A9A31EEA2290D33000F13DD4 /* XIBCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XIBCellViewController.m; sourceTree = "<group>"; };
 		A9A31EED22910CF900F13DD4 /* CustomXIBCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomXIBCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A90525B822D2DCFF008F056D /* CustomHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				A90525B922D2DD60008F056D /* StoryboardCustomCollapsibleHeader.h */,
+				A90525BA22D2DD60008F056D /* StoryboardCustomCollapsibleHeader.m */,
+			);
+			path = CustomHeaders;
+			sourceTree = "<group>";
+		};
 		A9739F952258387500C7992E = {
 			isa = PBXGroup;
 			children = (
@@ -113,14 +130,17 @@
 			children = (
 				A9A31EEC2290D95B00F13DD4 /* XIBCells */,
 				A97BEE3A22652D5900A03EE5 /* CustomRows */,
+				A90525B822D2DCFF008F056D /* CustomHeaders */,
 				A97BEE33226432EF00A03EE5 /* StoryboardCellController.h */,
 				A97BEE34226432EF00A03EE5 /* StoryboardCellController.m */,
 				A90762052277A050002E9418 /* NormalSectionController.h */,
 				A90762062277A050002E9418 /* NormalSectionController.m */,
 				A9A31EE92290D33000F13DD4 /* XIBCellViewController.h */,
-				A9A31EEA2290D33000F13DD4 /* XIBellViewController.m */,
+				A9A31EEA2290D33000F13DD4 /* XIBCellViewController.m */,
 				A98B49E322BAA835003FE2D9 /* CollapsibleSectionController.h */,
 				A98B49E422BAA835003FE2D9 /* CollapsibleSectionController.m */,
+				A90525B322D2D38E008F056D /* CustomCollapsibleSectionController.h */,
+				A90525B422D2D38E008F056D /* CustomCollapsibleSectionController.m */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -138,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				A9A31EED22910CF900F13DD4 /* CustomXIBCell.xib */,
+				A90525B622D2D92F008F056D /* CustomCollapsibleHeader.xib */,
 			);
 			path = XIBCells;
 			sourceTree = "<group>";
@@ -201,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9A31EEE22910CF900F13DD4 /* CustomXIBCell.xib in Resources */,
+				A90525B722D2D92F008F056D /* CustomCollapsibleHeader.xib in Resources */,
 				A9739FAE2258387700C7992E /* LaunchScreen.storyboard in Resources */,
 				A9739FAB2258387700C7992E /* Assets.xcassets in Resources */,
 				A9739FA92258387500C7992E /* Main.storyboard in Resources */,
@@ -215,7 +237,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9739FA62258387500C7992E /* ViewController.m in Sources */,
-				A9A31EEB2290D33000F13DD4 /* XIBellViewController.m in Sources */,
+				A90525B522D2D38E008F056D /* CustomCollapsibleSectionController.m in Sources */,
+				A9A31EEB2290D33000F13DD4 /* XIBCellViewController.m in Sources */,
+				A90525BB22D2DD60008F056D /* StoryboardCustomCollapsibleHeader.m in Sources */,
 				A907620422778C65002E9418 /* StoryboardCustomCell.m in Sources */,
 				A90762072277A050002E9418 /* NormalSectionController.m in Sources */,
 				A98B49E522BAA835003FE2D9 /* CollapsibleSectionController.m in Sources */,

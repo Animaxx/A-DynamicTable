@@ -6,7 +6,7 @@
 //  Copyright © 2019 Animax. All rights reserved.
 //
 
-#import "DynamicRowModel.h" d
+#import "DynamicRowModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

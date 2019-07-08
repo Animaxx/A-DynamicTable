@@ -16,9 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL isCollapsed;
 
 /// On change collapsed state event for overwrite
-/// @param header currect header
+/// @param model currect header
 /// @param state isColleapsed
-- (void)onDidChangeCollapsedState:(BasicCollapsibleHeader *)header state:(BOOL)state;
+- (void)onChangedCollapsedState:(BasicCollapsibleHeader *)model state:(BOOL)state;
 
 @end
 

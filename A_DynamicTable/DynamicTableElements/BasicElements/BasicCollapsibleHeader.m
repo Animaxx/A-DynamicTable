@@ -29,7 +29,7 @@
     void(^updateBlock)(void)  = ^ {
         [self.parentTableView reloadSections:[[NSIndexSet alloc] initWithIndex:self.sectionIndex]
                             withRowAnimation:UITableViewRowAnimationAutomatic];
-        [self onDidChangeCollapsedState:self state:_isSectionCollapsed];
+        [self onChangedCollapsedState:self state:self->_isSectionCollapsed];
     };
     if ([NSThread isMainThread]) {
         updateBlock();
@@ -44,7 +44,7 @@
     [super tapSectionHeader:sendor];
 }
 
-- (void)onDidChangeCollapsedState:(BasicCollapsibleHeader *)header state:(BOOL)state {
+- (void)onChangedCollapsedState:(BasicCollapsibleHeader *)model state:(BOOL)state {
     
 }
 
